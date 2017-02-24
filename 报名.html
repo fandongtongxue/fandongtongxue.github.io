@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!-- saved from url=(0069)http://www.meikejob.com/meikewap/index.php/Home/SchoolAmb/amb_success -->
+<html style="font-size: 10.9867px;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport">
+    <meta name="description" id="metacon" content="每刻兼职致力于为督导、领队和大学生打造最安全、高效、免费的兼职信息平台，用每刻兼职APP，与3500名督导+领队,微信1对1沟通。">
+    <title>报名</title>
+    <link href="./报名_files/schoolamb.css" rel="stylesheet">
+    <link href="./报名_files/iosSelect.css" rel="stylesheet">
+    <link href="./报名_files/webuploader.css" rel="stylesheet">
+    <script src="./报名_files/rem.js"></script>
+    <script src="./报名_files/jquery.js"></script>
+    <script src="./报名_files/layer.js"></script><link href="./报名_files/layer.css" type="text/css" rel="styleSheet" id="layermcss">
+    <script src="./报名_files/v1"></script><script type="text/javascript" src="./报名_files/sdk_release.js"></script>
+</head>
+<body class="success">
+<div class="success-con">
+    <img src="./报名_files/success.png" alt="">
+    <p>报名成功</p>
+    <span>请等待审核，客服人员会尽快与您联系</span>
+    <div class="return">
+        <div onclick="window.Android.returnHomePage()">返回首页</div>
+    </div>
+</div>
+
+<script type="text/javascript">
+
+
+    var u = navigator.userAgent;
+    var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
+    var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+    if(isAndroid){
+        $('.return').html(' <div onclick="window.Android.returnHomePage()">返回首页</div>')
+    }else if(isiOS){
+        $('.return').html(' <div onclick="iOSClient.goBackHomePage()">返回首页</div>')
+    }
+</script>
+
+</body></html>
