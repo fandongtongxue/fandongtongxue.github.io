@@ -26,15 +26,13 @@ RewriteRule ^(/)?$ api/index.php [L]
 ---
 在网站的根目录上新建一个api目录
 #第三步：主机空间绑定二级域名
+---
 ![](http://om2bks7xs.bkt.clouddn.com/2016-02-26-aliyun-bind.jpg)
+---
 #第四步：二级域名绑主机空间
+---
 ![](http://om2bks7xs.bkt.clouddn.com/2016-02-26-aliyun_dns.jpg)
+---
 #第五步：浏览器打开设置好的二级域名
 ---
 点击链接：[http://api.fandong.me](http://api.fandong.me "http://api.fandong.me")
-
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
-
-[jekyll-docs]: http://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
