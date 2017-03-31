@@ -1,22 +1,37 @@
 ---
 layout: post
-title: Sample Post
-date: 2016-02-15 15:32:24.000000000 +09:00
+title: 阿里云虚拟主机和二级域名你可能不知道的事！
+date: 2017-02-25 16:28:57.000000000 +08:00
 ---
 
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
-
-To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
-
-Jekyll also offers powerful support for code snippets:
-
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
+一直有做网站的这个情怀，才有了这个网站。
+用主站做了一年博客，才知道可以用二级域名来做很多事情，没必要非得用主站!
+然后，我就百度、百度。
+终于百度到了！
+在这里分享给大家！
+#第一步：新建一个.htaccess文件
+---
+在网站的根目录上新建一个.htaccess文件
+```
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^(www.)?api.fandong.me$
+RewriteCond %{REQUEST_URI} !^/api/
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ /api/$1
+RewriteCond %{HTTP_HOST} ^(www.)?api.fandong.me$
+RewriteRule ^(/)?$ api/index.php [L]
+```
+#第二步：创建二级子目录
+---
+在网站的根目录上新建一个api目录
+#第三步：主机空间绑定二级域名
+![](http://om2bks7xs.bkt.clouddn.com/2016-02-26-aliyun-bind.jpg)
+#第四步：二级域名绑主机空间
+![](http://om2bks7xs.bkt.clouddn.com/2016-02-26-aliyun_dns.jpg)
+#第五步：浏览器打开设置好的二级域名
+---
+点击链接：[http://api.fandong.me](http://api.fandong.me "http://api.fandong.me")
 
 Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
 
