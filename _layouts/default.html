@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <title>{{ site.title }}</title>
+  <meta name="description" content="{{ site.description }}" />
+
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  {% if site.favicon %}
+  <link rel="shortcut icon" href="{{ site.github_url }}/favicon.ico">
+  {% endif %}
+
+  <link rel="stylesheet" type="text/css" href="{{ site.github_url }}assets/css/screen.css" />
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" />
+</head>
+<body class="home-template nav-closed">
+
+  {% include menu.html %}
+  <div class="site-wrapper">
+    {% include header.html %}
+    <main id="content" class="content" role="main">
+    {{ content }}
+    </div>
+  </div>
+  {% include footer.html %}
+
+
+  <script type="text/javascript" src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+  <!-- You can safely delete this line if your theme does not require jQuery -->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script type="text/javascript" src="{{ site.github_url }}assets/js/jquery.fitvids.js?v=b60459228a"></script>
+  <script type="text/javascript" src="{{ site.github_url }}assets/js/index.js?v=b60459228a"></script>
+  
+  {% include analytics.html %}
+
+</body>
+</html>

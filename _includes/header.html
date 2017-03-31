@@ -1,0 +1,18 @@
+<header class="main-header" style="background-image: url({{ site.github_url }}assets/images/testimg-home-1.jpg)">
+  <!--<nav class="main-nav overlay clearfix">
+    <a class="blog-logo" href="/"><img src="/assets/images/Ghost-Transparent-for-DARK-BG.png" alt="Finding The Way Home" /></a>
+    <a class="menu-button icon-menu" href="#"><span class="word">Menu</span></a>
+  </nav>-->
+  <div class="vertical">
+    <div class="main-header-content inner">
+      {% if page.title != "" %}
+      <h1 class="page-title">{{ page.title }}</h1>
+      <h2 class="page-description">{{ page.description }}</h2>
+      {% else %}
+      <h1 class="page-title">{{ site.title }}</h1>
+      <h2 class="page-description">{{ site.description }}</h2>
+      {% endif %}
+    </div>
+  </div>
+  <a class="scroll-down icon-arrow-left" href="#content" data-offset="-45"><span class="hidden">Scroll Down</span></a>
+</header>

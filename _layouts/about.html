@@ -1,0 +1,17 @@
+---
+title: ''
+layout: default
+---
+<section class="author-profile inner">
+  <figure class="author-image">
+    <div class="img" style="background-image: url('{{ site.author.picture }}')"><span class="hidden">{{ site.author.name }}'s Picture</span></div>
+  </figure>
+  <h1 class="author-title">{{ site.author.name }}</h1>
+  <h2 class="author-bio">{{ site.author.description }}</h2>
+  <div class="author-meta">
+    {% if site.author.location %}
+      <span class="author-location icon-location">{{ site.author.location }}</span>
+    {% endif %}
+    <span class="author-link icon-link"><a href="http://github.com/{{ site.github_username }}" target="_blank">@{{ site.github_username }}</a></span>
+  </div>
+</section>
