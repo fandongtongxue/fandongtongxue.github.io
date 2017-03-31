@@ -36,9 +36,3 @@ RewriteRule ^(/)?$ api/index.php [L]
 #第五步：浏览器打开设置好的二级域名
 ---
 点击链接：[http://api.fandong.me](http://api.fandong.me "http://api.fandong.me")
-
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
-
-[jekyll-docs]: http://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
