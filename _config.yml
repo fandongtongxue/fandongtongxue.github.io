@@ -2,7 +2,7 @@
 title: 范东 - 技术博客
 subtitle: 一个开发者
 welcome_message: <a href="http://oht4nlntk.bkt.clouddn.com/File_iP112508ebd81ad0cd082cba240f5cbbd576bed471.pdf" target="_blank">下载范东的简历</a>
-description: Vno Jekyll is a port of my Ghost theme vno.
+description: 
 creator: <a href="http://blog.fandong.me">@范东同学</a>
 
 url: "http://blog.fandong.me"
@@ -17,7 +17,7 @@ cover_color: red
 
 # The blog button should not be removed.
 blog_button:
-    title: Blog
+    title: 博客
     description: Visit blog
 
 # Navigation buttons in the front page.
@@ -37,7 +37,7 @@ comment:
     
 # Social
 social:
-    weibo: 范东同学
+    weibo: fengzhizif2010
     github: fandongtongxue
     mail: admin@fandong.me
 
