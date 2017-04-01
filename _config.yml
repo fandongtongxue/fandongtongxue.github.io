@@ -1,7 +1,8 @@
 # Basic
-title: 范东 - 技术博客
-subtitle: 一个开发者
-welcome_message: <a href="http://oht4nlntk.bkt.clouddn.com/File_iP112508ebd81ad0cd082cba240f5cbbd576bed471.pdf" target="_blank">下载范东的简历</a>
+title: 范东
+subtitle: 一个iOS开发者
+# <a href="http://oht4nlntk.bkt.clouddn.com/File_iP112508ebd81ad0cd082cba240f5cbbd576bed471.pdf" target="_blank">下载范东的简历</a>
+welcome_message: 
 description: 
 creator: <a href="http://blog.fandong.me">@范东同学</a>
 
@@ -18,7 +19,7 @@ cover_color: red
 # The blog button should not be removed.
 blog_button:
     title: 博客
-    description: Visit blog
+    description: 查看博客
 
 # Navigation buttons in the front page.
 nav:
