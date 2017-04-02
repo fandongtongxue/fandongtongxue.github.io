@@ -22,8 +22,8 @@ blog_button:
     description: 查看博客
 
 # Navigation buttons in the front page.
-nav:
-    - {title: API文档, description: 项目的API文档, url: 'http://api.fandong.me'}
+#nav:
+#    - {title: API文档, description: 项目的API文档, url: 'http://api.fandong.me'}
     # - {title: Another Button, description: A button, url: 'http://example.com'}
 
 # Pagination
