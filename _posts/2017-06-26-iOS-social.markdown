@@ -7,7 +7,7 @@ date: 2017-07-09 11:00:00.000000000 +08:00
 ---
 最近突然萌生了做FDXXXX系列的想法
 那首先把之前删掉的Social相关的再重做一下吧!
-项目地址:[https://github.com/fandongtongxue/FDSocialDemo.git](https://github.com/fandongtongxue/FDSocialDemo.git)
+项目地址:[https://github.com/fandongtongxue/FDSocialDemo](https://github.com/fandongtongxue/FDSocialDemo)
 遇到的问题如下
 
 ---
