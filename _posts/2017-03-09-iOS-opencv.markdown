@@ -114,5 +114,5 @@ double angle( cv::Point pt1, cv::Point pt2, cv::Point pt0 ) {
 ```
 第三步:获取结果图片 
 更多详细内容请查看GitHub
-[https://github.com/fandongtongxue/CropIDCardDemo](https://github.com/fandongtongxue/CropIDCardDemo)
+[https://github.com/fandongtongxue/FDOpenCVDemo](https://github.com/fandongtongxue/FDOpenCVDemo)
 
