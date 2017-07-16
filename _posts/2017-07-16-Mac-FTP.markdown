@@ -9,10 +9,12 @@ date: 2017-07-16 11:00:00.000000000 +08:00
 #### 从Spotlight启动
 ![从Spotlight启动](http://om2bks7xs.bkt.clouddn.com/2017-07-16-Mac-FTP-Spotlight.png)
 ### 第二步 cd到需要分享的目录,并且开启服务器
+(未安装Python的同学,请百度安装)
 ![cd到Share/开启服务器](http://om2bks7xs.bkt.clouddn.com/2017-07-16-Mac-FTP-Terminal.png)
 ### 验证是否开启成功
 打开Safari/Chrome,地址栏中输入[http://localhost:8000/](http://localhost:8000/)
 ![localhost:8000](http://om2bks7xs.bkt.clouddn.com/2017-07-16-Mac-FTP-localhost:8000.png)
 ### 大功告成,同局域网的其他设备可以输入以上地址进行访问下载!
-
+(其他设备需要将localhost改成Mac的IP地址,比如我的就是192.168.1.104)
+![192.168.1.104:8000](http://om2bks7xs.bkt.clouddn.com/2017-07-16-Mac-FTP-192.168.1.104:8000.jpeg)
 
