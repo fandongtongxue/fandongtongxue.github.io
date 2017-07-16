@@ -1,7 +1,14 @@
 ---
-layout: post
-title: iOS使用OpenCV进行图像切割你可能需要的Demo
+layout:     post
+title:      "iOS使用OpenCV进行图像切割你可能需要的Demo"
+subtitle:   ""
 date: 2017-03-09 18:03:07.000000000 +08:00
+author:     "范东"
+header-img: "img/post-bg-ios9-web.jpg"
+catalog:    true
+tags:
+    - iOS
+    - OpenCV
 ---
 
 ![](http://om2bks7xs.bkt.clouddn.com/2017-03-09-iOS-opencv.jpeg)
@@ -17,12 +24,12 @@ date: 2017-03-09 18:03:07.000000000 +08:00
 ![](http://om2bks7xs.bkt.clouddn.com/2017-03-09-iOS-cropidcarddemo.gif)
 现在开始!
 
-#第一步:获取图片
+### 第一步:获取图片
 移动设备获取图片有两种方式
 1.拍照 2.从相册中选取  如果以上你不会,那请关闭页面,去看吐槽大会(本人最近特别喜欢的综艺节目)
 [吐槽大会直达链接](http://v.qq.com/detail/5/50133.html)
 
-#第二步:操作图片
+### 第二步:操作图片
 主要用到了Stackflow大神的一些代码
 
 ```
@@ -112,7 +119,7 @@ double angle( cv::Point pt1, cv::Point pt2, cv::Point pt0 ) {
     return (dx1*dx2 + dy1*dy2)/sqrt((dx1*dx1 + dy1*dy1)*(dx2*dx2 + dy2*dy2) + 1e-10);
 }
 ```
-第三步:获取结果图片 
+### 第三步:获取结果图片 
 更多详细内容请查看GitHub
 [https://github.com/fandongtongxue/FDOpenCVDemo](https://github.com/fandongtongxue/FDOpenCVDemo)
 

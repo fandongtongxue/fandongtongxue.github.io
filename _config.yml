@@ -1,48 +1,93 @@
-# Basic
-title: 范东
-subtitle: 一个iOS开发者
-# <a href="http://oht4nlntk.bkt.clouddn.com/File_iP112508ebd81ad0cd082cba240f5cbbd576bed471.pdf" target="_blank">下载范东的简历</a>
-welcome_message: 
-description: 
-creator: <a href="http://blog.fandong.me">@范东同学</a>
+# Site settings
+title: Blog
+SEOTitle: 范东 - 博客
+header-img: img/home-bg.jpg
+email: admin@fandong.me
+description: "关于iOS与PHP | 范东，iOS & PHP Lover | 这里是 @范东同学 的个人博客，与你一起发现更大的世界。"
+keyword: "范东, 范东同学, FD, fandong, fandongtongxue, @范东同学, 范东的博客, 博客, 个人网站, 互联网, iOS, 设计, 产品, XXX, XXX(EN), XXX的男朋友"
+url: "http://blog.fandong.me"              # your host, for absolute URL
+baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
 
-url: "http://blog.fandong.me"
 
-permalink: /:year/:month/:title/
 
-# Format
+# SNS settings
+RSS: true
+weibo_username:     fengzhizif2010
+# zhihu_username:     fandongtongxue
+github_username:    fandongtongxue
+# twitter_username:   fandongtongxue
+#facebook_username:  fandongtongxue
+# linkedin_username:  firstname-lastname-idxxxx
+
+
+
+# Build settings
+# from 2016, 'pygments' is unsupported on GitHub Pages. Use 'rouge' for highlighting instead.
 highlighter: rouge
-
-# supported colors: blue, green, purple, red, orange or slate. If you need clear, leave it empty.
-cover_color: red
-
-# The blog button should not be removed.
-blog_button:
-    title: 博客
-    description: 查看博客
-
-# Navigation buttons in the front page.
-#nav:
-#    - {title: API文档, description: 项目的API文档, url: 'http://api.fandong.me'}
-    # - {title: Another Button, description: A button, url: 'http://example.com'}
-
-# Pagination
-gems: [jekyll-paginate]
+permalink: pretty
 paginate: 10
-paginate_path: "page/:num/"
+exclude: ["less","node_modules","Gruntfile.js","package.json","README.md","README.zh.md"]
+anchorjs: true                          # if you want to customize anchor. check out line:181 of `post.html`
 
-# Comment
-comment:
-    disqus: vno-jekyll
-    # duoshuo: 
-    
-# Social
-social:
-    weibo: fengzhizif2010
-    github: fandongtongxue
-    mail: admin@fandong.me
+
+
+# Gems
+# from PR#40, to support local preview for Jekyll 3.0
+gems: [jekyll-paginate]
+
+
+
+# Markdown settings
+# replace redcarpet to kramdown,
+# although redcarpet can auto highlight code, the lack of header-id make the catalog impossible, so I switch to kramdown
+# document: http://jekyllrb.com/docs/configuration/#kramdown
+markdown: kramdown
+kramdown:
+  input: GFM                            # use Github Flavored Markdown !important
+
+
+
+# Disqus settings
+disqus_username: false
+
+# Netease setttings
+netease_comment: false
+
+
+
+# Analytics settings
+# Baidu Analytics 
+# ba_track_id: [your track id]
 
 # Google Analytics
-ga:
-    # id: your_ga_id
-    # host: your_host
+# ga_track_id: 'UA-49627206-1'            # Format: UA-xxxxxx-xx
+# ga_domain: huangxuan.me
+
+
+
+# Sidebar settings
+sidebar: true                           # whether or not using Sidebar.
+sidebar-about-description: "一个iOS开发者"
+sidebar-avatar: /img/avatar-hux.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
+
+
+
+# Featured Tags
+featured-tags: true                     # whether or not using Feature-Tags
+featured-condition-size: 1              # A tag will be featured if the size of it is more than this condition value
+
+
+
+# Progressive Web Apps
+chrome-tab-theme-color: "#000000"
+service-worker: true
+
+
+
+# Friends
+friends: [
+    {
+        title: "老狼博客",
+        href: "http://laolang.cn"
+    }
+]

@@ -1,7 +1,13 @@
 ---
-layout: post
-title: iOS集成第三方登录可能会遇到的问题
+layout:     post
+title:      "iOS集成第三方登录可能会遇到的问题"
+subtitle:   ""
 date: 2017-07-09 11:00:00.000000000 +08:00
+author:     "范东"
+header-img: "img/post-bg-ios9-web.jpg"
+catalog:    true
+tags:
+    - iOS
 ---
 
 ---
