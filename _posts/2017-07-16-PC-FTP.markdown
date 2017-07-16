@@ -1,0 +1,31 @@
+---
+layout: post
+title: PC上搭建简单的FTP服务器(仅用于局域网)
+date: 2017-07-16 12:00:00.000000000 +08:00
+---
+### 第一步:打开控制面板选择卸载程序(查看方式为类别)
+![](http://om2bks7xs.bkt.clouddn.com/2017-07-16-PC-FTP-ControlPanel.png.png)
+### 第二步:左侧面板选择打开或关闭Windows功能
+![](http://om2bks7xs.bkt.clouddn.com/2017-07-16-PC-FTP-OpenFunction.png.png)
+### 第三步:添加FTP服务器和IIS管理控制台功能,并点击确定保存
+![](http://om2bks7xs.bkt.clouddn.com/2017-07-16-PC-FTP-OpenFunctionList.png.png)
+### 第四步:再次打开控制面板,选择管理工具(查看方式为大图标)
+![](http://om2bks7xs.bkt.clouddn.com/2017-07-16-PC-FTP-ManageTool.png.png)
+### 第五步:打开IIS管理器
+![](http://om2bks7xs.bkt.clouddn.com/2017-07-16-PC-FTP-IIS.png.png)
+### 第六步:打开IIS列表
+![](http://om2bks7xs.bkt.clouddn.com/2017-07-16-PC-FTP-IISList.png.png)
+### 第七步:右键点击添加FTP站点
+![](http://om2bks7xs.bkt.clouddn.com/2017-07-16-PC-FTP-AddFTP.png.png)
+### 第八步:添加FTP第一小步
+![](http://om2bks7xs.bkt.clouddn.com/2017-07-16-PC-FTP-AddFTPStep1.png.png)
+### 第九步:添加FTP第二小步
+![](http://om2bks7xs.bkt.clouddn.com/2017-07-16-PC-FTP-AddFTPStep2.png.png)
+### 第十步:添加FTP第三小步,点击完成
+![](http://om2bks7xs.bkt.clouddn.com/2017-07-16-PC-FTP-AddFTPStep3.png.png)
+### 第十一步:确认FTP是否生效
+![](http://om2bks7xs.bkt.clouddn.com/2017-07-16-PC-FTP-AddFTPConfirm.png.png)
+### 第十二步:其他设备可以通过之前设置的地址进行访问
+ftp://192.168.1.105
+
+
