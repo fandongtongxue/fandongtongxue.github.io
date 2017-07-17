@@ -7,7 +7,9 @@ author:     "范东"
 header-img: "img/post-bg-ios9-web.jpg"
 catalog:    true
 tags:
-    - PC
+    - Nginx
+    - HTTP
+    - HTTPS
 ---
 
 阿里云提供了免费的SSL证书（见下图）
