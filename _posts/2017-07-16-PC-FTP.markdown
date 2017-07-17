@@ -8,6 +8,7 @@ header-img: "img/post-bg-ios9-web.jpg"
 catalog:    true
 tags:
     - PC
+    - FTP
 ---
 
 ### 第一步:打开控制面板选择卸载程序(查看方式为类别)
