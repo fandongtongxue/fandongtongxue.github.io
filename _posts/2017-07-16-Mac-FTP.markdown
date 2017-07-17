@@ -8,7 +8,7 @@ header-img: "img/post-bg-ios9-web.jpg"
 catalog:    true
 tags:
     - Mac
-    - FTP
+    - FTP
 ---
 
 ### 第一步 打开Terminal.app(终端)
