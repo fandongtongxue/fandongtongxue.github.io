@@ -9,7 +9,7 @@ catalog:    true
 tags:
     - iOS
     - 阿里云
-    - 移动数据分析
+    - Runtime
 ---
 
 ### 集成阿里云移动数据分析
