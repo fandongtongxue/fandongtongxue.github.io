@@ -38,19 +38,19 @@ UIViewController+MYExtension
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken,^{
         Class class=[self class];
-        
-        SEL originalSelector=@selector(viewWillAppear:);
-        SEL swizzledSelector=@selector(my_viewWillAppear:);
-        
+        //生成两个SEL
+        SEL originalSelector = @selector(viewWillAppear:);
+        SEL swizzledSelector = @selector(my_viewWillAppear:);
+        //生成两个Method
         Method originalMethod = class_getInstanceMethod(class,originalSelector);
         Method swizzledMethod = class_getInstanceMethod(class,swizzledSelector);
-        
+        //对UIViewController类添加方法
         BOOL didAddMethod =
         class_addMethod(class,
                         originalSelector,
                         method_getImplementation(swizzledMethod),
                         method_getTypeEncoding(swizzledMethod));
-        
+        //如果添加成功,替换方法,否则交换方法实现
         if(didAddMethod){
             class_replaceMethod(class,
                                 swizzledSelector,
