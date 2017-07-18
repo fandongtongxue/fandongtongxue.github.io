@@ -32,7 +32,7 @@ UIViewController+MYExtension
     [self my_viewWillAppear:animated];
 }
 
-+(void)load{
++ (void)load{
     NSString *className = NSStringFromClass(self.class);
     MYLog(@"%@",className);
     static dispatch_once_t onceToken;
