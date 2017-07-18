@@ -24,12 +24,18 @@ UIViewController+MYExtension
 #import "UIViewController+MYExtension.h"
 #import <AlicloudMobileAnalitics/ALBBMAN.h>
 
+#define AliAnalitics [ALBBMANPageHitHelper getInstance]
+
 @implementation UIViewController (MYExtension)
 
-- (void)my_viewWillAppear:(BOOL)animated{
-    ALBBMANPageHitHelper *helper = [ALBBMANPageHitHelper getInstance];
-    [helper pageAppear:self];
-    [self my_viewWillAppear:animated];
+- (void)my_viewDidAppear:(BOOL)animated{
+    [AliAnalitics pageAppear:self];
+    [self my_viewDidAppear:animated];
+}
+
+- (void)my_viewDidDisappear:(BOOL)animated{
+    [AliAnalitics pageDisAppear:self];
+    [self my_viewDidDisappear:animated];
 }
 
 + (void)load{
@@ -37,29 +43,31 @@ UIViewController+MYExtension
     MYLog(@"%@",className);
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken,^{
-        Class class=[self class];
-        //生成两个SEL
-        SEL originalSelector = @selector(viewWillAppear:);
-        SEL swizzledSelector = @selector(my_viewWillAppear:);
-        //生成两个Method
-        Method originalMethod = class_getInstanceMethod(class,originalSelector);
-        Method swizzledMethod = class_getInstanceMethod(class,swizzledSelector);
-        //对UIViewController类添加方法
-        BOOL didAddMethod =
-        class_addMethod(class,
-                        originalSelector,
-                        method_getImplementation(swizzledMethod),
-                        method_getTypeEncoding(swizzledMethod));
-        //如果添加成功,替换方法,否则交换方法实现
-        if(didAddMethod){
-            class_replaceMethod(class,
-                                swizzledSelector,
-                                method_getImplementation(originalMethod),
-                                method_getTypeEncoding(originalMethod));
-        }else{
-            method_exchangeImplementations(originalMethod,swizzledMethod);
-        }
+        [UIViewController replaceOrExchangeMethodOriginSelector:@selector(viewDidAppear:) SwizzledSelector:@selector(my_viewDidAppear:)];
+        [UIViewController replaceOrExchangeMethodOriginSelector:@selector(viewDidDisappear:) SwizzledSelector:@selector(my_viewDidDisappear:)];
     });
+}
+
++ (void)replaceOrExchangeMethodOriginSelector:(SEL)originSelector SwizzledSelector:(SEL)swizzledSelector{
+    Class class=[self class];
+    
+    Method originalMethod = class_getInstanceMethod(class,originSelector);
+    Method swizzledMethod = class_getInstanceMethod(class,swizzledSelector);
+    
+    BOOL didAddMethod =
+    class_addMethod(class,
+                    originSelector,
+                    method_getImplementation(swizzledMethod),
+                    method_getTypeEncoding(swizzledMethod));
+    
+    if(didAddMethod){
+        class_replaceMethod(class,
+                            swizzledSelector,
+                            method_getImplementation(originalMethod),
+                            method_getTypeEncoding(originalMethod));
+    }else{
+        method_exchangeImplementations(originalMethod,swizzledMethod);
+    }
 }
 ````
 
