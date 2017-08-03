@@ -24,10 +24,10 @@ tags:
 *  从Mac App Store 安装[Xcode 8](https://itunes.apple.com/us/app/xcode/id497799835?mt=12)
 ![Xcode 8](http://om2bks7xs.bkt.clouddn.com/2017-08-03-Swift-Vapor-Web-01-1.png)
 
-### 打开Xcode
+#### 打开Xcode
 * 当Xcode 8 下载完之后，你必须打开它完成安装，这可能会花费一定的时间。
 
-### 确认Swift的安装
+#### 确认Swift的安装
 （按回车两次再次检查Swift的安装）
 ```
 eval "$(curl -sL check.vapor.sh)"
