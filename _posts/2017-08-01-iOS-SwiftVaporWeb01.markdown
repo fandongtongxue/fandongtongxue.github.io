@@ -16,7 +16,7 @@ tags:
 之前一直有做Java后台开发的兴趣，可是想到要看好多的Java教程，作为一个iOS开发者，我放弃了，
 后来从朋友[韩云智VL](http://www.jianshu.com/u/92f7630a351b)那里知道了这个框架，竟是用Swift写的，不得不说，它燃起了我的兴趣。
 [Vapor](http://vapor.codes)是一个基于Swift开发的服务端框架，可以工作于iOS，Mac OS，Ubuntu。
-上一篇[Vapor 2.0 - 概述](http://www.jianshu.com/p/0c0c6554e472)
+[上一篇Vapor 2.0 - 概述](http://www.jianshu.com/p/0c0c6554e472)
 以下文字翻译自[Vapor Docs/Getting started/Install:Mac OS](https://docs.vapor.codes/2.0/getting-started/install-on-macos/)
 ## 在Mac OS上安装
 想要在Mac OS上用Vapor，你只需要确保已安装Xcode 8。
