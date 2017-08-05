@@ -2,7 +2,7 @@
 layout:     post
 title:      "基于Swift的Web框架Vapor2.0文档（翻译）Hello,World"
 subtitle:   ""
-date: 2017-08-04 12:00:00.000000000 +08:00
+date: 2017-08-04 16:00:00.000000000 +08:00
 author:     "范东"
 header-img: "img/post-bg-ios9-web.jpg"
 catalog:    true
@@ -19,6 +19,7 @@ tags:
 为了配合Swift部署到服务器,我把ECS的服务器系统改为Ubuntu16.04。
 > [Vapor 2.0 - 文档目录](http://www.jianshu.com/p/155866779a8e)
 > 以下文字翻译自[Vapor Docs/Getting started/Hello,World](https://docs.vapor.codes/2.0/getting-started/hello-world/)
+
 ## Hello,World
 这个章节需要你已经安装了Swift3.1以及Vapor工具箱并且确认他们正在工作
 >提示
