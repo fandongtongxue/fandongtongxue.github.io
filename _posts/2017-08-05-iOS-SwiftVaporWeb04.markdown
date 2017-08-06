@@ -31,3 +31,58 @@ tags:
 vapor new Hello --template=api
 ```
 如果你已经使用过其他网络框架之后，你会对Vapor的目录结构很熟悉。
+```Hello
+├── Config
+│   ├── app.json
+│   ├── crypto.json
+│   ├── droplet.json
+│   ├── fluent.json
+│   └── server.json
+├── Package.pins
+├── Package.swift
+├── Public
+├── README.md
+├── Sources
+│   ├── App
+│   │   ├── Config+Setup.swift
+│   │   ├── Controllers
+│   │   │   └── PostController.swift
+│   │   ├── Droplet+Setup.swift
+│   │   ├── Models
+│   │   │   └── Post.swift
+│   │   └── Routes.swift
+│   └── Run
+│       └── main.swift
+├── Tests
+│   ├── AppTests
+│   │   ├── PostControllerTests.swift
+│   │   ├── RouteTests.swift
+│   │   └── Utilities.swift
+│   └── LinuxMain.swift
+├── circle.yml
+└── license```
+对于我们的Hello，World工程，我们将会关注```Route.swift```文件
+```
+Hello
+└── Sources
+    └── App
+        └── Routes.swift
+```
+>提示
+>```vapor new```这个命令会创建一个包含例子和描述怎么使用这个框架的新工程，如果你愿意你也可以删除它
+
+### 代码
+#### Droplet
+在Routes.swift文件中看下面这行
+```
+func setupRoutes() throws
+```
+这是所有访问我们应用程序的路由都会添加的方法
+#### 路由
+在```build```方法的范围内，查找以下的陈述
+```
+get("plaintext"){ req in
+	return "Hello,world!"
+}
+```
+这行代码创建了一个新的路由，这个路由会匹配所有的到/plaintext的GET请求
