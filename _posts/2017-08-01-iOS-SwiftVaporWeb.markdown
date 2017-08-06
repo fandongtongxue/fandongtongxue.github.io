@@ -23,8 +23,8 @@ tags:
 #### [在Ubuntu上安装](http://blog.fandong.me/2017/08/04/iOS-SwiftVaporWeb02/)
 #### [工具箱](http://blog.fandong.me/2017/08/04/iOS-SwiftVaporWeb03/)
 #### [Hello World](http://blog.fandong.me/2017/08/04/iOS-SwiftVaporWeb04/)
-#### [手动](http://blog.fandong.me/2017/08/04/iOS-SwiftVaporWeb05/)
-#### [Xcode](http://blog.fandong.me/2017/08/04/iOS-SwiftVaporWeb06/)
+#### [手动](http://blog.fandong.me/2017/08/06/iOS-SwiftVaporWeb05/)
+#### [Xcode](http://blog.fandong.me/2017/08/06/iOS-SwiftVaporWeb06/)
 ### Vapor
 ### Configs（配置文件）
 ### JSON
