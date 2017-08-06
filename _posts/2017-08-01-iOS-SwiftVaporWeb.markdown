@@ -23,11 +23,27 @@ tags:
 #### [在Ubuntu上安装](http://blog.fandong.me/2017/08/04/iOS-SwiftVaporWeb02/)
 #### [工具箱](http://blog.fandong.me/2017/08/04/iOS-SwiftVaporWeb03/)
 #### [Hello World](http://blog.fandong.me/2017/08/04/iOS-SwiftVaporWeb04/)
-#### 手动
-#### Xcode
+#### [手动](http://blog.fandong.me/2017/08/04/iOS-SwiftVaporWeb05/)
+#### [Xcode](http://blog.fandong.me/2017/08/04/iOS-SwiftVaporWeb06/)
 ### Vapor
 ### Configs（配置文件）
 ### JSON
 ### Routing（路由）
+### Fluent
+### Cache
+### MySQL
+### Redis
+### Auth
+### JWT
+### Session
+### HTTP
+### Leaf
+### Validation
+### Node
+### Code
+### Bits
+### Debugging
+### Deploy
+### Version(2.0)
 
 
