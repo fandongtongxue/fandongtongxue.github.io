@@ -25,7 +25,7 @@ tags:
 Vapor的命令行界面提供了一般任务的入口和一些快捷方式
 ![](http://om2bks7xs.bkt.clouddn.com/2017-08-03-Swift-Vapor-Web-03-1.png)
 > 提示
-> 如果你不想用Toolbox或者模板,请移步[Manual](https://docs.vapor.codes/2.0/getting-started/manual/)来快速开始
+> 如果你不想用Toolbox或者模板,请移步[Manual](http://blog.fandong.me/2017/08/06/iOS-SwiftVaporWeb05/)来快速开始
 
 ### 帮助
 帮助命令会打印出关于可用的命令和flags有用的信息,你也可以运行```--help```在任何工具箱命令行中
