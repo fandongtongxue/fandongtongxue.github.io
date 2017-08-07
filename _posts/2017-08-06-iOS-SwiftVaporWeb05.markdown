@@ -22,7 +22,7 @@ tags:
 
 ## 手动快速开始
 学习不用工具箱只用Swift3.1和Swift包管理器（SPM）创建一个Vapor工程
-这篇文档需要你已经安装了Swift3.1，如果没有,在继续之前请移步[Swift。org](https://swift.org/getting-started/#installing-swift)
+这篇文档需要你已经安装了Swift3.1，如果没有,在继续之前请移步[Swift.org](https://swift.org/getting-started/#installing-swift)
 >提示
 >如果你愿意使用工具箱，请移步[工具箱指引](http://www.jianshu.com/p/e75e62138ebd)
 
