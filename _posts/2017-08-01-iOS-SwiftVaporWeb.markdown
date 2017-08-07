@@ -27,6 +27,7 @@ tags:
 #### [Xcode](http://blog.fandong.me/2017/08/06/iOS-SwiftVaporWeb06/)
 ### Vapor
 ### Configs（配置文件）
+#### [Configs](http://blog.fandong.me/2017/08/07/iOS-SwiftVaporWeb07/)
 ### JSON
 ### Routing（路由）
 ### Fluent
