@@ -38,10 +38,14 @@ tags:
 #### [Configs](http://blog.fandong.me/2017/08/07/iOS-SwiftVaporWeb07/)
 ### JSON
 #### [Package](http://www.jianshu.com/p/87a42c06df7d)
+#### [Overview](http://www.jianshu.com/p/95430b8e6026)
 ### Routing（路由）
 #### [Package](http://blog.fandong.me/2017/08/08/iOS-SwiftVaporWeb08/)
 #### [Overview](http://blog.fandong.me/2017/08/09/iOS-SwiftVaporWeb09/)
 ### Fluent
+#### [Package](http://www.jianshu.com/p/5a2f6965f73b)
+#### [Get Started](http://www.jianshu.com/p/f590e6449e47)
+#### [Model](http://www.jianshu.com/p/a919cd994f5b)
 ### Cache
 ### MySQL
 ### Redis
