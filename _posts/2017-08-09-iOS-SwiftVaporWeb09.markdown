@@ -18,7 +18,7 @@ tags:
 [Vapor](http://vapor.codes)是一个基于Swift开发的服务端框架，可以工作于iOS，Mac OS，Ubuntu。
 为了配合Swift部署到服务器,我把ECS的服务器系统改为Ubuntu16.04。
 > [Vapor 2.0 - 文档目录](http://blog.fandong.me/2017/08/01/iOS-SwiftVaporWeb/)
-> 以下文字翻译自[Vapor Docs/Routing/Package](https://docs.vapor.codes/2.0/routing/overview/)
+> 以下文字翻译自[Vapor Docs/Routing/Overview](https://docs.vapor.codes/2.0/routing/overview/)
 
 ## 基础路由
 路由是一个网络框架中最关键的模块之一，路由决定了什么样的请求获得什么样的响应.
@@ -74,7 +74,7 @@ drop.get("vapor"){ request in
 这对于创建特殊的响应(比如重定向)非常有用,这对于你需要向响应中添加Cookies或者其他项目的情况也是有用的
 ### 响应机制
 正如你在前面看到的例子一样,路由闭包中可以返回字符串,这是因为他们符合响应机制
-Vapor中的很多类型默认遵循这个协议,-String-Int-[JSON](https://docs.vapor.codes/2.0/json/package/)-[Model](https://docs.vapor.codes/2.0/fluent/model/)
+Vapor中的很多类型默认遵循这个协议,-String-Int-[JSON](http://www.jianshu.com/p/87a42c06df7d)-[Model](http://www.jianshu.com/p/a919cd994f5b)
 
 ```
 drop.get("json"){ request in
