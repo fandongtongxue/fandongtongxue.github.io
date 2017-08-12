@@ -20,3 +20,5 @@ tags:
 > [Vapor 2.0 - 文档目录](http://blog.fandong.me/2017/08/01/iOS-SwiftVaporWeb/)
 > 以下文字翻译自[Vapor Docs/Redis/Provider/](https://docs.vapor.codes/2.0/redis/provider/)
 
+## Redis提供商
+
