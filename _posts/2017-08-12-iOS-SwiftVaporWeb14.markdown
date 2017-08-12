@@ -18,7 +18,7 @@ tags:
 [Vapor](http://vapor.codes)是一个基于Swift开发的服务端框架，可以工作于iOS，Mac OS，Ubuntu。
 为了配合Swift部署到服务器,我把ECS的服务器系统改为Ubuntu16.04。
 > [Vapor 2.0 - 文档目录](http://blog.fandong.me/2017/08/01/iOS-SwiftVaporWeb/)
-> 以下文字翻译自[Vapor Docs/Routing/Group](https://docs.vapor.codes/2.0/cache/overview/)
+> 以下文字翻译自[Vapor Docs/Cache/Overview](https://docs.vapor.codes/2.0/cache/overview/)
 
 ## 缓存
 Vapor的```CacheProtocol```允许你使用可选的过期日期从缓存中存储和检索条目

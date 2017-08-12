@@ -18,7 +18,7 @@ tags:
 [Vapor](http://vapor.codes)是一个基于Swift开发的服务端框架，可以工作于iOS，Mac OS，Ubuntu。
 为了配合Swift部署到服务器,我把ECS的服务器系统改为Ubuntu16.04。
 > [Vapor 2.0 - 文档目录](http://blog.fandong.me/2017/08/01/iOS-SwiftVaporWeb/)
-> 以下文字翻译自[Vapor Docs/Routing/Group](https://docs.vapor.codes/2.0/routing/collection/)
+> 以下文字翻译自[Vapor Docs/Routing/Collection](https://docs.vapor.codes/2.0/routing/collection/)
 
 ## 路由集合
 路由集合允许将多个路由和路由组组织在不同的文件和模块中.
