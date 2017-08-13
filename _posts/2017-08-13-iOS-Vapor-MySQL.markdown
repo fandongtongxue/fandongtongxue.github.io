@@ -14,7 +14,7 @@ tags:
     - MySQL
 ---
 ## 前言
-在[Toolbox章节](http://www.jianshu.com/p/0c336c3ca8c7)我们已经讲了Vapor的几种模板,可以点击以上链接去看.
+在[Toolbox章节](http://blog.fandong.me/2017/08/04/iOS-SwiftVaporWeb03/)我们已经讲了Vapor的几种模板,可以点击以上链接去看.
 ## MySQL模板
 ### 创建基于API模板的Vapor项目
 这篇文章我们来讲下,如何改造一个默认API模板成为一个MySQL模板
