@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "基于Swift的Web框架Vapor2.0文档（翻译）JWT-Package"
+title:      "基于Swift的Web框架Vapor2.0文档（翻译）JWT-Overview"
 subtitle:   ""
 date: 2017-08-13 20:00:00.000000000 +08:00
 author:     "范东"
@@ -18,42 +18,84 @@ tags:
 [Vapor](http://vapor.codes)是一个基于Swift开发的服务端框架，可以工作于iOS，Mac OS，Ubuntu。
 为了配合Swift部署到服务器,我把ECS的服务器系统改为Ubuntu16.04。
 > [Vapor 2.0 - 文档目录](http://blog.fandong.me/2017/08/01/iOS-SwiftVaporWeb/)
-> 以下文字翻译自[Vapor Docs/JWT/Package](https://docs.vapor.codes/2.0/jwt/package/)
+> 以下文字翻译自[Vapor Docs/JWT/Overview](https://docs.vapor.codes/2.0/jwt/overview/)
 
-## 使用JWT
-这章节讲述怎么导入JWT包,不论你使用Vapor或者不使用Vapor
-### 使用Vapor
-最简单使用Vapor使用JWT就是包含JWT provider
+## JWT概述
+这份指导提供了使用JWT提供程序包的概述
 
-```
-import PackageDescription
+### 配置
 
-let package = Package(
-    name: "Project",
-    dependencies: [
-        .Package(url: "https://github.com/vapor/vapor.git", majorVersion: 2),
-        .Package(url: "https://github.com/vapor/jwt-provider.git", majorVersion: 1)
-    ],
-    exclude: [ ... ]
-)
-```
+```JWTProvider```可以通过三种方式来初始化
 
-JWT提供程序包会添加JWT到你的工程,并且会添加额外的,比如Vapor特别方便的就像```drop.signers```
-使用```import JWTProvider```
+* 定制的自定义签名者```jwt.json```
+* 支持(私有/公共)```hmac``` ```rsa``` ```esdca```
+* 传统的自定义签名者定义```jwt.json```
+* 支持(私有/公共)```hmac``` ```rsa``` ```esdca```
+* 远程```jwt.json```远程文件链接
+* 支持(私有/公共)```rsa```
 
-### 仅使用JWT
-JWT提供程序包的核心是一个快速的,纯Swift的JWT对于解码,序列化和验证JSON Web令牌的实现
+如果你的Vapor应用程序作为身份验证程序,您可能需要使用```Legacy custom signer```安装程序或```Custom signers```设置,如果要执行证书更换,那这应该是比较好的.
+唯一的区别是```JWT```头中```Custom signers```的```kid```值不被忽略,并且它必须与相关联的签名者匹配才能验证签名.
+如果你的Vapor应用程序是将认证委托给第三方(auth0,stormpath等)的资源提供者,则可能需要使用```Remote JSON Web Key Set```设置,在此配置中,JWT令牌由提供JSONWeb密钥集格式的第三方生成,Vapor仅负责验证```JWT```使用第三方提供的密钥集.
+
+#### 远程JSON Web密钥集
 
 ```
-import PackageDescription
-
-let package = Package(
-    name: "Project",
-    dependencies: [
-        ...
-        .Package(url: "https://github.com/vapor/jwt.git", majorVersion: 2)
-    ],
-    exclude: [ ... ]
-)
+Config/jwt.json
 ```
-使用```import JWT```来使用JWT类
+
+```
+{
+	"jwks-url" : "http://my-domain.com/well-known/jwks.json"
+}
+```
+#### 自定义签名者
+这允许指定一组签名者,特别适用于替换证书,自定义签名者不能向后兼容,并且必须在配置中指定一个附加的```kid```值
+
+* type:```unsigned```,```hmac```,```esdca```
+* kid:一个唯一的标识符
+* algorithm
+* type[hmac]:hs256,hs384,hs512
+* type[rsa]:rs256,rs384,rs512
+* type[esdca]:es256,es384,es512
+
+
+```
+Config/jwt.json
+```
+```
+{
+	"signers":[
+	{
+		"type":"rsa",
+		"kid":"1234",
+		"algorithm":"rs256",
+		"key":"yourkeyhere"
+	}
+	]
+}
+```
+
+#### 传统自定义签名者
+这和以前的实现向后兼容
+
+* type:```unsigned```,```hmac```,```esdca```
+* algorithm
+* type[hmac]:hs256,hs384,hs512
+* type[rsa]:rs256,rs384,rs512
+* type[esdca]:es256,es384,es512
+
+
+```
+Config/jwt.json
+```
+
+```
+{ 
+  “signer” ： { 
+    “type” ： “rsa” ，
+    “algorithm” ： “rs256” ，
+    “key” ： “yourkeyhere” 
+  } 
+}
+```

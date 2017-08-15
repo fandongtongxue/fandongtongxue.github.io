@@ -1,8 +1,8 @@
 ---
 layout:     post
-title:      "基于Swift的Web框架Vapor2.0文档（翻译）Redis-Provider"
+title:      "基于Swift的Web框架Vapor2.0文档（翻译）JWT-Package"
 subtitle:   ""
-date: 2017-08-12 13:00:00.000000000 +08:00
+date: 2017-08-13 20:00:00.000000000 +08:00
 author:     "范东"
 header-img: "img/post-bg-ios9-web.jpg"
 catalog:    true
@@ -18,74 +18,42 @@ tags:
 [Vapor](http://vapor.codes)是一个基于Swift开发的服务端框架，可以工作于iOS，Mac OS，Ubuntu。
 为了配合Swift部署到服务器,我把ECS的服务器系统改为Ubuntu16.04。
 > [Vapor 2.0 - 文档目录](http://blog.fandong.me/2017/08/01/iOS-SwiftVaporWeb/)
-> 以下文字翻译自[Vapor Docs/Redis/Provider/](https://docs.vapor.codes/2.0/redis/provider/)
+> 以下文字翻译自[Vapor Docs/JWT/Package](https://docs.vapor.codes/2.0/jwt/package/)
 
-## Redis提供商
-在你添加[Redis提供程序包](http://blog.fandong.me/2017/08/12/iOS-SwiftVaporWeb13/)到你的项目里之后，在代码中设置提供程序将会变得很简单。
-### 添加到Droplet
-第一步，在容器中注册```RedisProvider.Provider```
-
-```
-import Vapor
-import RedisProvider
-
-let config = try Config()
-try config.addProvider(RedisProvider.Provider.self)
-
-let drop = try Droplet(config)
-```
-### 配置Vapor
-一旦添加提供程序包添加到你的Droplet中,你就可以配置Vapor使用Redis来缓存.
+## 使用JWT
+这章节讲述怎么导入JWT包,不论你使用Vapor或者不使用Vapor
+### 使用Vapor
+最简单使用Vapor使用JWT就是包含JWT provider
 
 ```
-Config/droplet.json
+import PackageDescription
+
+let package = Package(
+    name: "Project",
+    dependencies: [
+        .Package(url: "https://github.com/vapor/vapor.git", majorVersion: 2),
+        .Package(url: "https://github.com/vapor/jwt-provider.git", majorVersion: 1)
+    ],
+    exclude: [ ... ]
+)
 ```
 
-```
-{
-	"cache":"redis"
-}
-```
+JWT提供程序包会添加JWT到你的工程,并且会添加额外的,比如Vapor特别方便的就像```drop.signers```
+使用```import JWTProvider```
 
->更多
-
->学习更多的配置信息[设置引导](http://blog.fandong.me/2017/08/07/iOS-SwiftVaporWeb07/)
-
-### 配置Redis
-如果你现在运行你的应用程序,你将会看到一个Redis配置文件找不到的错误,让我们现在来添加它
-#### 基础
-这里有一个Redis配置文件的例子
+### 仅使用JWT
+JWT提供程序包的核心是一个快速的,纯Swift的JWT对于解码,序列化和验证JSON Web令牌的实现
 
 ```
-Config/redis.json
-```
+import PackageDescription
 
+let package = Package(
+    name: "Project",
+    dependencies: [
+        ...
+        .Package(url: "https://github.com/vapor/jwt.git", majorVersion: 2)
+    ],
+    exclude: [ ... ]
+)
 ```
-{
-	"hostname":"127.0.0.1"
-	"port":6379,
-	"password":"secret",
-	"database":2
-}
-```
-
-密码(password)和数据库(database)是可选项
->笔记
-> 如果配置文件中包含敏感信息,最好把Redis配置文件放到```Config/secret```文件夹中
-
-#### URL
-你也可以通过URL来通过Redis验证
-
-```
-Config/Redis.json
-```
-
-```
-{
-	"url":"redis://:secret@127.0.0.1:6379/2"
-}
-```
-密码(password)和数据库(database)是可选项
-
-### 完成
-你现在已经准备好了通过Redis数据库[使用缓存](http://blog.fandong.me/2017/08/12/iOS-SwiftVaporWeb13/)
+使用```import JWT```来使用JWT类

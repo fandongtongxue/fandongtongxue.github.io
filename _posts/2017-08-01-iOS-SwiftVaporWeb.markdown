@@ -65,16 +65,35 @@ tags:
 ### Auth
 #### [Package](http://www.jianshu.com/p/0d4344e0f1a0)
 #### [Provider](http://www.jianshu.com/p/900e80cce498)
+#### [Getting Started](http://www.jianshu.com/p/11c941b24724)
+#### [Helper](http://www.jianshu.com/p/5d2905c605e8)
+#### [Password](http://www.jianshu.com/p/4b24584fb033)
+#### [Persist](http://www.jianshu.com/p/1c197ef8ddbb)
+#### [Redirect Middleware](http://www.jianshu.com/p/d09dba0684b3)
 ### JWT
+#### [Package](http://blog.fandong.me/2017/08/13/iOS-SwiftVaporWeb18/)
+#### [Overview](http://blog.fandong.me/2017/08/13/iOS-SwiftVaporWeb19/)
 ### Session
+#### [Package](http://www.jianshu.com/p/30d8c92a98a5)
+#### [Overview](http://www.jianshu.com/p/11b9178f64ed)
 ### HTTP
+#### [Package](http://blog.fandong.me/2017/08/15/iOS-SwiftVaporWeb20/)
 ### Leaf
+#### [Package](http://www.jianshu.com/p/5f631eac999f)
+#### [Provider](http://www.jianshu.com/p/7e6c2c587899)
+#### [Overview](http://www.jianshu.com/p/53c9477eda83)
 ### Validation
 ### Node
+#### [Package](http://www.jianshu.com/p/9156c55afe84)
+#### [Getting Started](http://www.jianshu.com/p/33c0544aa9ac)
 ### Code
 ### Bits
+#### [Package](http://www.jianshu.com/p/d119e9939d1e)
+#### [Overview](http://www.jianshu.com/p/7af1d3dbbd78)
 ### Debugging
 ### Deploy
+#### [Nginx](http://www.jianshu.com/p/e211efa92785)
+#### [Supervisor](http://www.jianshu.com/p/ac02861cba4d)
 ### Version(2.0)
 
 
