@@ -60,7 +60,6 @@ Config/jwt.json
 ```
 Config/jwt.json
 ```
-
 ```
 {
 	"signers":[
@@ -76,15 +75,18 @@ Config/jwt.json
 
 #### 传统自定义签名者
 这和以前的实现向后兼容
+
 * type: ```unsigned```,```hmac```,```esdca```
 * algorithm:
 * type[hmac]: hs256, hs384, hs512
 * type[rsa]: rs256, rs384, rs512
 * type[esdca]: es256, es384, es512
 
+
 ```
 Config/jwt.json
 ```
+
 ```
 { 
   “signer” ： { 
