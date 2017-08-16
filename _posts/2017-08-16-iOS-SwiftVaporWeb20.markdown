@@ -2,7 +2,7 @@
 layout:     post
 title:      "基于Swift的Web框架Vapor2.0文档（翻译）HTTP-Request"
 subtitle:   ""
-date: 2017-08-15 09:00:00.000000000 +08:00
+date: 2017-08-16 09:00:00.000000000 +08:00
 author:     "范东"
 header-img: "img/post-bg-ios9-web.jpg"
 catalog:    true
@@ -47,4 +47,8 @@ let fragment = request.uri.fragment // fragments-too
 ### 路由参数
 与请求关联的url参数,举个例子,如果我们有一个注册的路径```hello/:name/age/:age```,我们将能够访问请求中的参数.像这样
 
+```
+let name = request.parameters["name"] //String
+let age = request.parameters["age"]?.int //Int
+```
 
