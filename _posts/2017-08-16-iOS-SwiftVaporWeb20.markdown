@@ -22,7 +22,8 @@ tags:
 
 ## 请求
 
-```HTTP```库中最常用的交互部分就是```Request```类型,这里有一些这种类型中最常用的属性.
+`HTTP`库中最常用的交互部分就是`Request`类型,这里有一些这种类型中最常用的属性.
+
 ```
 public var method: Method
 public var uri: URI
@@ -32,12 +33,11 @@ public var body: Body
 public var data: Content
 ```
 ### 方法
-
-HTTP中与请求有关的请求,即:```GET```,```POST```,```PUT```,```PATCH```,```DELETE```.
+HTTP中与请求有关的请求,即:`GET`,`POST`,`PUT`,`PATCH`,`DELETE`.
 ### URI
-
 与请求关联的URI,我们将使用它来访问请求发送的属性
-举个例子,给定以下URI:```http://vapor.codes/example?query=hi#fragments-too```
+举个例子,给定以下URI:`http://vapor.codes/example?query=hi#fragments-too`
+
 ```
 let scheme = request.uri.scheme //http
 let host = request.uri.host //Vapor.codes
@@ -47,7 +47,8 @@ let fragment = request.uri.fragment // fragments-too
 ```
 ### 路由参数
 
-与请求关联的url参数,举个例子,如果我们有一个注册的路径```hello/:name/age/:age```,我们将能够访问请求中的参数.像这样
+与请求关联的url参数,举个例子,如果我们有一个注册的路径`hello/:name/age/:age`,我们将能够访问请求中的参数.像这样
+
 ```
 let name = request.parameters["name"] //String
 let age = request.parameters["age"]?.int //Int
