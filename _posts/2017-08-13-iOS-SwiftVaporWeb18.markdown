@@ -92,10 +92,10 @@ Config/jwt.json
 
 ```
 { 
-  "signer" ： { 
-  "type" ： "rsa" ，
-  "algorithm" ： "rs256" ，
-  "key" ： "yourkeyhere" 
+  "signer":{
+  "type":"rsa",
+  "algorithm":"rs256",
+  "key":"yourkeyhere" 
   } 
 }
 ```
