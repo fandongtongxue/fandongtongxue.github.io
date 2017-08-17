@@ -114,11 +114,19 @@ let names = pokemonResponse.data["results", "name"]?.array
 let json = request.response["hello"]
 ```
 ## 关键路径
-获取更多信息,访问[这里](http://www.jianshu.com/p/5699c7fcf8e9)
+获取更多信息,访问[这里](http://blog.fandong.me/2017/08/16/iOS-SwiftVaporWeb20/)
 ## 服务端文件
 如果你只想从公共目录来查看服务端文件,你查看`FileMiddleware`应该是有用的.
 
 ```
 let res = try Response(filePath: "/path/to/file.txt")
 ```
+使用它来初始化文件路径的文件响应,例如,如果使用公共文件夹,文件名应该在前面添加公共目录的路径,即`drop.publicDir + "myFile.cool"`
+
+```
+Response(filePath: String, ifNoneMatch: String? = nil, chunkSize: Int = 2048) throws
+```
+如果没有匹配表示将用于检查客户端上次加载后文件是否已更改的ETag,这样像浏览器这样的客户端,可以缓存他们的文件,避免不必要的重复下载,最常计算的是`/ https://tools.ietf.org/html/rfc7232#section-3.2`
+
+有关怎么使用的示例,请查看"FileMiddleware"
 
