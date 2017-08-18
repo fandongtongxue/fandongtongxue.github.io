@@ -55,12 +55,103 @@ let drop = try Droplet(config)
 你可以想见,我们的版本中间件就在连接客户端和我们的服务器中间,访问我们的服务器每一个请求和响应都必须经过这个中间件链.
 ![](http://om2bks7xs.bkt.clouddn.com/2017-08-18-iOS-SwiftVaporWeb22-01.png)
 
-### 分解
+#### 分解
 我们一行一行的分解中间件
 
 ```
 let response = try next.respond(to: request)
 ```
-由于
+由于`VersionMiddleware`在这个例子中没有修改请求,所以我们要求下一个中间件来响应该请求,链条一直下降到`Droplet`,然后回到发送给客户端的响应.
 
+```
+response.headers["Version"] = "API v1.0"
+```
+然后我们定义一个包含版本的请求头的响应.
+
+```
+return response
+```
+返回响应,并将备份任何剩余的中间件,返回给客户端.
+
+### 请求
+中间件也可以被修改或与请求交互
+
+```
+func respond(to request: Request, chainingTo next: Responder) throws -> Response {
+    guard request.cookies["token"] == "secret" else {
+        throw Abort(.badRequest)
+    }
+
+    return try next.respond(to: request)
+}
+```
+这个中间件将要求该请求的cookie具有一个`token`键值等于`secret`或其他的,请求将被终止.
+
+### 错误
+中间件是捕获程序中任意位置错误的完美地方,当您让中间件捕获错误时,您可以从路由闭包中删除大量重复的逻辑,看看下面的例子:
+
+```
+enum FooError: Error {
+    case fooServiceUnavailable
+}
+```
+假设您定义了自定义错误或您正在使用的的其中一个API`throws`,抛出的错误必须被捕获,否则最终将作为用户意外的内部服务器错误(500),最明显的解决方案就是在路由闭包中捕获错误
+
+```
+app.get("foo") { request in
+    let foo: Foo
+    do {
+        foo = try getFooFromService()
+    } catch {
+        throw Abort(.badRequest)
+    }
+
+    // continue with Foo object
+}
+```
+这个解决方案是有效的,但是如果有多个路由需要处理这个错误,他将会产生重复代码,幸运的是,这个错误可以在中间件中捕获
+
+```
+final class FooErrorMiddleware: Middleware {
+    func respond(to request: Request, chainingTo next: Responder) throws -> Response {
+        do {
+            return try next.respond(to: request)
+        } catch FooError.fooServiceUnavailable {
+            throw Abort(
+                .badRequest,
+                reason: "Sorry, we were unable to query the Foo service."
+            )
+        }
+    }
+}
+```
+我们只需要添加这个中间件到我们的Droplet的配置文件中.
+
+```
+config.addConfigurable(middleware: FooErrorMiddleware(), name: "foo-error")
+```
+>提示
+>不要忘记在`droplet.json`文件中启用中间件
+
+现在我们的路由闭包看起来好多了,我们也不必担心代码的重复了
+
+```
+app.get("foo") { request in
+    let foo = try getFooFromService()
+
+    // continue with Foo object
+}
+```
+### 路由组
+更细致的来说,中间件可以应用于特定的路由组.
+
+```
+let authed = drop.grouped(AuthMiddleware())
+authed.get("secure") { req in
+    return Secrets.all().makeJSON()
+}
+```
+添加到`authed`组的任何内容都必须通过`AuthMiddleware`.因此,我们可以假定所有访问`/secure`的流量已经被授权了,了解更多请查看[路由](http://blog.fandong.me/2017/08/12/iOS-SwiftVaporWeb11/)
+### 配置
+你可以使用[配置](https://docs.vapor.codes/2.0/configs/config/)文件来启用或禁用中间件
 
