@@ -10,10 +10,30 @@ tags:
     - iOS
     - UIImagePickerController
 ---
-
-iOS开发中,我们经常会调用相册实现选择图片的功能,一般的会去调用UIImagePickerController实现拍照和选取本地相册
+## 前言
+iOS开发中,我们经常会调用相册实现选择图片的功能,一般的会去调用UIImagePickerController实现拍照和选取本地相册.
+## 原有
 一般我们看到的界面是下面这种
 系统版本:iOS Version 11.0beta6
 手机型号:iPhone 7 Plus
+
 ![拍照](http://om2bks7xs.bkt.clouddn.com/2017-08-18-iOS-UIImagePickerController-01.PNG)
+
 ![选择相册中图片](http://om2bks7xs.bkt.clouddn.com/2017-08-18-iOS-UIImagePickerController-02.PNG)
+
+## 改变
+### 第一步
+
+![Project-Info](http://om2bks7xs.bkt.clouddn.com/2017-08-18-iOS-UIImagePickerController-03.PNG)
+
+![Project-Info](http://om2bks7xs.bkt.clouddn.com/2017-08-18-iOS-UIImagePickerController-04.PNG)
+
+![Project-Info](http://om2bks7xs.bkt.clouddn.com/2017-08-18-iOS-UIImagePickerController-05.PNG)
+
+### 第二步
+
+![Target-Info](http://om2bks7xs.bkt.clouddn.com/2017-08-18-iOS-UIImagePickerController-06.PNG)
+
+![Target-Info](http://om2bks7xs.bkt.clouddn.com/2017-08-18-iOS-UIImagePickerController-07.PNG)
+
+## 重新运行下看看吧!
