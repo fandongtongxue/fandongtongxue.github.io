@@ -232,3 +232,48 @@ extension Response {
     }
 }
 ```
+在这个例子中,我们给响应添加一个新的属性来持有一个口袋对象,如果中间件发现了一个包含口袋对象的响应,它将动态的检查客户端是否是支持HTML的,如果客户端是一个像Safari的浏览器,支持HTML,它将会发挥一个Mustache视图,,如果客户端不支持HTML,它将会返回JSON
+
+##### 使用方法
+你的闭包现在应该看起来这样
+
+```
+
+import Vapor
+
+let config = try Config()
+config.addConfigurable(middleware: PokemonMiddleware.init, name: "pokemon")
+
+let drop = try Droplet(config)
+
+drop.get("pokemon", Pokemon.self) { request, pokemon in
+    let response = Response()
+    response.pokemon = pokemon
+    return response
+}
+```
+>提示
+>别忘记添加`pokemon`到你的`droplet.json`的中间件数组
+
+##### Response Representable
+如果你想更进一步,你可以使`Pokemon`遵循`ResponseRepresentable`
+
+```
+import HTTP
+
+extension Pokemon: ResponseRepresentable {
+    func makeResponse() throws -> Response {
+        let response = Response()
+        response.pokemon = self
+        return response
+    }
+}
+```
+现在你的闭包就大大简化了
+
+```
+drop.get("pokemon", Pokemon.self) { request, pokemon in
+    return pokemon
+}
+```
+中间件是非常强大的.结合扩展,它允许您添加对框架本身的功能.
