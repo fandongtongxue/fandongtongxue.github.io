@@ -21,4 +21,46 @@ tags:
 > 以下文字翻译自[Vapor Docs/HTTP/Middle](https://docs.vapor.codes/2.0/http/middleware/)
 
 ## 中间件
+中间件是任何现代Web框架的重要组成部分,它允许你在客户端和服务器之间经过时修改请求和响应.
+您可以将中间件看作连接您的服务器和请求您的网络应用程序的客户端的逻辑.
+### 版本中间件
+例如,让我们创建一个中间件,对每个响应添加我们的API版本,中间件看起来会是这样的:
+
+```
+import HTTP
+
+final class VersionMiddleware: Middleware {
+    func respond(to request: Request, chainingTo next: Responder) throws -> Response {
+        let response = try next.respond(to: request)
+
+        response.headers["Version"] = "API v1.0"
+
+        return response
+    }
+}
+```
+我们将这个中间件提供给我们的`Droplet`容器
+
+```
+import Vapor
+
+let config = try Config()
+
+config.addConfigurable(middleware: VersionMiddleware(), name: "version")
+
+let drop = try Droplet(config)
+```
+>你现在可以再配置文件中启用和禁用此中间件,只需要添加`version`到您的`droplet.json`中的`middleware`数组,请查看配置文件章节
+
+你可以想见,我们的版本中间件就在连接客户端和我们的服务器中间,访问我们的服务器每一个请求和响应都必须经过这个中间件链.
+![](http://om2bks7xs.bkt.clouddn.com/2017-08-18-iOS-SwiftVaporWeb22-01.png)
+
+### 分解
+我们一行一行的分解中间件
+
+```
+let response = try next.respond(to: request)
+```
+由于
+
 
