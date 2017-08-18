@@ -24,16 +24,16 @@ iOS开发中,我们经常会调用相册实现选择图片的功能,一般的会
 ## 改变
 ### 第一步
 
-![Project-Info](http://om2bks7xs.bkt.clouddn.com/2017-08-18-iOS-UIImagePickerController-03.PNG)
+![工程截图](http://om2bks7xs.bkt.clouddn.com/2017-08-18-iOS-UIImagePickerController-03.PNG)
 
-![Project-Info](http://om2bks7xs.bkt.clouddn.com/2017-08-18-iOS-UIImagePickerController-04.PNG)
+![工程截图](http://om2bks7xs.bkt.clouddn.com/2017-08-18-iOS-UIImagePickerController-04.PNG)
 
-![Project-Info](http://om2bks7xs.bkt.clouddn.com/2017-08-18-iOS-UIImagePickerController-05.PNG)
+![工程截图](http://om2bks7xs.bkt.clouddn.com/2017-08-18-iOS-UIImagePickerController-05.PNG)
 
 ### 第二步
 
-![Target-Info](http://om2bks7xs.bkt.clouddn.com/2017-08-18-iOS-UIImagePickerController-06.PNG)
+![工程截图](http://om2bks7xs.bkt.clouddn.com/2017-08-18-iOS-UIImagePickerController-06.PNG)
 
-![Target-Info](http://om2bks7xs.bkt.clouddn.com/2017-08-18-iOS-UIImagePickerController-07.PNG)
+![工程截图](http://om2bks7xs.bkt.clouddn.com/2017-08-18-iOS-UIImagePickerController-07.PNG)
 
 ## 重新运行下看看吧!

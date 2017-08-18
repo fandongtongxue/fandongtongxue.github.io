@@ -153,5 +153,82 @@ authed.get("secure") { req in
 ```
 添加到`authed`组的任何内容都必须通过`AuthMiddleware`.因此,我们可以假定所有访问`/secure`的流量已经被授权了,了解更多请查看[路由](http://blog.fandong.me/2017/08/12/iOS-SwiftVaporWeb11/)
 ### 配置
-你可以使用[配置](https://docs.vapor.codes/2.0/configs/config/)文件来启用或禁用中间件
+你可以使用[配置](https://docs.vapor.codes/2.0/configs/config/)文件来启用或禁用中间件,如果你有中间件,例如,仅在生产环境中运行,这将非常有用.
+添加可配置的中间件,像下面这样
 
+```
+let config = try Config()
+
+config.addConfigurable(middleware: myMiddleware, name: "my-middleware")
+
+let drop = Droplet(config)
+```
+然后,在`Config/droplet.json`文件中,添加`my-middleware`到`middleware`数组中.
+
+```
+{
+    ...
+    "middleware": {
+        ...
+        "my-middleware",
+        ...
+    },
+    ...
+}
+```
+如果添加的中间件的名称出现在中间件阵列中,那么当应用程序启动时,它将被添加到服务器的中间件.
+按照中间件中的顺序
+### 手动
+如果你不想使用配置文件,你也可以对中间件进行硬编码.
+
+```
+import Vapor
+
+let versionMiddleware = VersionMiddleware()
+let drop = try Droplet(middleware: [versionMiddleware])
+```
+### 高级
+#### 扩展
+中间件需要与请求/响应的扩展和存储有很好的配对关系,这个例子给你还在那时了如何根据客户端的类型为模型动态的返回HTML或JSON响应
+
+##### 中间件
+```
+final class PokemonMiddleware: Middleware {
+    let view: ViewProtocol
+    init(_ view: ViewProtocol) {
+        self.view = view
+    }
+
+    func respond(to request: Request, chainingTo next: Responder) throws -> Response {
+        let response = try next.respond(to: request)
+
+        if let pokemon = response.pokemon {
+            if request.accept.prefers("html") {
+                response.view = try view.make("pokemon.mustache", pokemon)
+            } else {
+                response.json = try pokemon.makeJSON()
+            }
+        }
+
+        return response
+    }
+}
+
+extension PokemonMiddleware: ConfigInitializable {
+    convenience init(config: Config) throws {
+        let view = try config.resolveView()
+        self.init(view)
+    }
+}
+```
+##### 响应
+延伸到`Response`.
+
+```
+extension Response {
+    var pokemon: Pokemon? {
+        get { return storage["pokemon"] as? Pokemon }
+        set { storage["pokemon"] = newValue }
+    }
+}
+```
