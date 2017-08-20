@@ -22,4 +22,4 @@ tags:
 
 ## ResponseRepresentable
 
-传统的HTTP服务器
+传统的HTTP服务器,发送一个请求,返回一个响应,Vapor也不例外,但是我们可以利用Swift强大的协议来使用户面对API更加灵活.
