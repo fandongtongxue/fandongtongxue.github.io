@@ -68,3 +68,71 @@ return Response(status: .ok) { chunker in
 }
 ```
 >确保在分块离开范围之前调用`close()`
+
+### BodyRepressentable
+
+除了具体的`Body`类型,就像在Vapor中常见,我们也广泛的支持`BodyRepresentable`.这意味着我们通常转换的类型的对象可以互换使用,举个栗子
+
+```
+return Response(body: "Hello, World!")
+```
+在上面的例子中,字符串被转换成二进制,并且添加到了请求体中
+>作为练习,最好使用`Hello,World!`Vapor会自动设置`Content-Type`为合适的值
+
+我们来看看它是如何实现的:
+
+```
+public protocol BodyRepresentable {
+    func makeBody() -> Body
+}
+```
+#### 自定义
+我们也可以在适用的情况下遵照我们自己的类型,假设我们有一个自定义的数据类型,`.vpr`让我们符合我们的`VPR`文件类型
+
+```
+extension VPRFile: HTTP.BodyRepresentable {
+  func makeBody() -> Body {
+    // collect bytes
+    return .data(bytes)
+  }
+}
+```
+>你可能已经注意到,协议抛出,但是我们没有实现,这在Swift中完全有效,如果你曾经手动调用过这个方法,那你将无法抛出.
+
+现在我们可以直接在我们的`Responses`中包含我们的`VPR`文件.
+
+```
+drop.get("files", ":file-name") { request in
+  let filename = try request.parameters.extract("file-name") as String
+  let file = VPRFileManager.fetch(filename)
+  return Response(status: .ok, headers: ["Content-Type": "file/vpr"], body: file)
+}
+```
+作为练习,如果我们经常重复这些过程,我们可能会让`VPRFile`直接遵循`ResponseRepresentable`
+
+```
+extension VPRFile: HTTP.ResponseRepresentable {
+  func makeResponse() -> Response {
+    return Response(
+      status: .ok,
+      headers: ["Content-Type": "file/vpr"],
+      body: file
+    )
+  }
+}
+```
+这是我们上面的例子
+
+```
+drop.get("files", ":file-name") { request in
+  let filename = try request.parameters.extract("file-name") as String
+  return VPRFileManager.fetch(filename)
+}
+```
+我们也可以使用类型安全的路由使其更简洁:
+
+```
+drop.get("files", String.self) { request, filename in
+  return VPRFileManager.fetch(filename)
+}
+```
