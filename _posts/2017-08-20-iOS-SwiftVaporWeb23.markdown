@@ -31,6 +31,40 @@ public enum Body {
 ```
 ### 数据案例
 `Data Case`是一个目前最常见的`Body`中的`HTTP.Message`.它只是一个字节数组,与这些字节数组关联的序列化协议或类型通常由`Content-Type`请求头定义,我们来看些例子
-
 #### Application/JSON
-如果我们的
+如果我们的`Content-Type`请求头包含`application/json`,那么底层二级制数据表示序列化的JSON
+
+```
+if let contentType = req.headers["Content-Type"], contentType.contains("application/json"), let bytes = req.body.bytes {
+  let json = try JSON(bytes: bytes)
+  print("Got JSON: \(json)")
+}
+```
+#### Image/PNG
+如果我们的`Content-Type`包含`image/png`,则底层二进制数据表示编码的png.
+
+```
+if let contentType = req.headers["Content-Type"], contentType.contains("image/png"), let bytes = req.body.bytes {
+  try database.save(image: bytes)
+}
+```
+### 分块案例
+分块案例只适用于Vapor的外发的`HTTP.Message`,传统意义上,响应者的角色是在传递之前收集整个分块编码,我们可以使用它来异步发送一个正文.
+
+```
+let body: Body = Body.chunked(sender)
+return Response(status: .ok, body: body)
+```
+我们也可以手动实现,也可以使用Vapor的内置便利的初始化器来进行对请求体进行分块.
+
+```
+return Response(status: .ok) { chunker in
+  for name in ["joe", "pam", "cheryl"] {
+      sleep(1)
+      try chunker.send(name)
+  }
+
+  try chunker.close()
+}
+```
+>确保在分块离开范围之前调用`close()`
