@@ -21,5 +21,7 @@ tags:
 > 以下文字翻译自[Vapor Docs/HTTP/CORS](https://docs.vapor.codes/2.0/http/cors/)
 
 ## CORS
+默认情况下,Vapor提供了一个实现源代码资源共享(CORS - Cross-ORigin Resource Sharing)叫`CORSMiddleware`中间件
+CORS - Cross-ORigin Resource Sharing是一种
 
 
