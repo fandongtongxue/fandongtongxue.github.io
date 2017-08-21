@@ -2,7 +2,7 @@
 layout:     post
 title:      "基于Swift的Web框架Vapor2.0文档（翻译）HTTP-Server"
 subtitle:   ""
-date: 2017-08-21 21:00:00.000000000 +08:00
+date: 2017-08-21 22:00:00.000000000 +08:00
 author:     "范东"
 header-img: "img/post-bg-ios9-web.jpg"
 catalog:    true
@@ -18,7 +18,7 @@ tags:
 [Vapor](http://vapor.codes)是一个基于Swift开发的服务端框架，可以工作于iOS，Mac OS，Ubuntu。
 为了配合Swift部署到服务器,我把ECS的服务器系统改为Ubuntu16.04。
 > [Vapor 2.0 - 文档目录](http://blog.fandong.me/2017/08/01/iOS-SwiftVaporWeb/)
-> 以下文字翻译自[Vapor Docs/HTTP/Client](https://docs.vapor.codes/2.0/http/server/)
+> 以下文字翻译自[Vapor Docs/HTTP/Server](https://docs.vapor.codes/2.0/http/server/)
 
 ## 服务器
 服务器负责接受来自客户端的连接,解析他们的请求,并给他们发送响应
