@@ -99,5 +99,3 @@ Config/client.json
 }
 ```
 对于以上的例子,发送到`drop.client.get(...)`的请求都将通过google.com代理.
-
-
