@@ -69,6 +69,47 @@ Config/cors.json
 `CORSMiddleware`具有适合绝大多数用户的默认配置,它们的值像下面这样
 
 - 允许原始的
-- 请求中的原始 
+- 请求中的原始请求头
 - 允许的方法
+- `GET`,`POST`,`PUT`,`OPTIONS`,`DELETE`,`PATCH`
 - 允许的请求头
+- `Accept`,`Authorization`,`Content-Type`,`Origin`,`X-Requested-With`
+
+### 高级
+高级用户可以自定义所有的设置和预设,有两种方法,可以通过编程方式创建和配置`CORSConfiguration`文件,也可以将你的配置放入Vapor的JSON配置文件.
+看看如下的设置的两种方法.
+#### 配置
+`CORSConfiguration`结构体用于配置`CORS中间件`.你可以这样来初始化
+
+```
+let config = try Config()
+config.addConfigurable(middleware: { config in
+    return CORSConfiguration(
+        allowedOrigin: .custom("https://vapor.codes"),
+        allowedMethods: [.get, .post, .options],
+        allowedHeaders: ["Accept", "Authorization"],
+        allowCredentials: false,
+        cacheExpiration: 600,
+        exposedHeaders: ["Cache-Control", "Content-Language"]
+    )
+}, name: "custom-cors")
+```
+然后设置`custom-cors`到你的Droplet的中间件数组.
+
+```
+Config/droplet.json
+```
+
+```
+{
+    ...,
+    "middleware": [
+        ...,
+        "custom-cors",
+        ...,
+    ],
+    ...,
+}
+```
+>笔记
+>有关设置`CORSConfiguration`可用值的更多信息,请参阅源代码中的文档.
