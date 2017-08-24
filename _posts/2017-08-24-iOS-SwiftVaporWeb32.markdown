@@ -2,7 +2,7 @@
 layout:     post
 title:      "基于Swift的Web框架Vapor2.0文档（翻译）Core-Package"
 subtitle:   ""
-date: 2017-08-24 08:00:00.000000000 +08:00
+date: 2017-08-24 08:55:00.000000000 +08:00
 author:     "范东"
 header-img: "img/post-bg-ios9-web.jpg"
 catalog:    true
@@ -18,28 +18,40 @@ tags:
 [Vapor](http://vapor.codes)是一个基于Swift开发的服务端框架，可以工作于iOS，Mac OS，Ubuntu。
 为了配合Swift部署到服务器,我把ECS的服务器系统改为Ubuntu16.04。
 > [Vapor 2.0 - 文档目录](http://blog.fandong.me/2017/08/01/iOS-SwiftVaporWeb/)
-> 以下文字翻译自[Vapor Docs/Core/Package](https://docs.vapor.codes/2.0/core/package/)
+> 以下文字翻译自[Vapor Docs/Core/Overview](https://docs.vapor.codes/2.0/core/overview/)
 
-## 使用Core(核心)
-### 通过Vapor
-默认情况下,这个依赖包就包含在Vapor当中,只需要添加
-
-```
-import Core
-```
-### 没有Vapor
-Core(核心)为任何服务器端的Swift项目提供了大量的便利,要将其包含在您的包中,请将以下内容添加到您的`Package.swift`文件中.
+## Core(核心)
+Core(核心)为常用任务提供了一些便利
+### 后台
+用`backgroud()`可以轻松创建一个后台线程
 
 ```
-import PackageDescription
+print("hello")
 
-let package = Package(
-    name: "Project",
-    dependencies: [
-        ...
-        .Package(url: "https://github.com/vapor/core.git", majorVersion: 2)
-    ],
-    exclude: [ ... ]
-)
+try background {
+    print("world")  
+}
 ```
-使用`import Core`方位Core(核心)的API.
+### Portal
+Protals允许你创建异步任务闭包
+
+```
+let result = try Portal.open { portal in
+    someAsyncTask { result in
+        portal.close(with: result)
+    }
+}
+
+print(result) // the result from the async task
+```
+### RFC1123
+创建RFC1123类型的日期.
+
+```
+let now = Date().rfc1123 // string 
+```
+你也可以解析RFC1123的字符串
+
+```
+let parsed = Date(rfc1123: "Mon, 10 Apr 2017 11:26:13 GMT")
+```
