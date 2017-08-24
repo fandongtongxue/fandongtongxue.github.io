@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "基于Swift的Web框架Vapor2.0文档（翻译）Core-Package"
+title:      "基于Swift的Web框架Vapor2.0文档（翻译）Core-Overview"
 subtitle:   ""
 date: 2017-08-24 08:55:00.000000000 +08:00
 author:     "范东"
