@@ -10,6 +10,6 @@ tags:
     - Markdown
 ---
 
-<video id="video" controls="" preload="none" poster="http://om2bks7xs.bkt.clouddn.com/2017-08-25-Markdown-Advance.png">
-      <source id="m4v" src="http://om2bks7xs.bkt.clouddn.com/2017-08-25-Markdown-Advance.m4v" type="video/m4v">
+<video id="video" controls="" preload="none" poster="http://om2bks7xs.bkt.clouddn.com/2017-08-25-Markdown-Advance-Video.png">
+      <source id="m4v" src="http://om2bks7xs.bkt.clouddn.com/2017-08-25-Markdown-Advance-Video.mp4" type="video/mp4">
       </video>
