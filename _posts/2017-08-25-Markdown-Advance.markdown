@@ -63,18 +63,36 @@ tags:
 - 第一条
 - 第二条
 ```
-### 5.剩下的不再赘述了
+### 5.代码块
+```
+printf("Hello world!")
+```
+![代码块](http://om2bks7xs.bkt.clouddn.com/2017-08-26-Markdown-Advance-Code.png)
 
-### 6.Markdown嵌套视频(厉害了)
-<video id="video" controls="" preload="none" poster="http://om2bks7xs.bkt.clouddn.com/2017-08-26-Markdown-Advance-Video.jpg">
-      <source id="mp4" src="http://om2bks7xs.bkt.clouddn.com/2017-08-26-Markdown-Advance-Video.mp4" type="video/mp4">
-      </video>
-      
-嵌套视频代码
+### 6.引用
+>引用
 
 ```
-<video id="video" controls="" preload="none" poster="http://om2bks7xs.bkt.clouddn.com/2017-08-26-Markdown-Advance-Video.jpg">
-      <source id="mp4" src="http://om2bks7xs.bkt.clouddn.com/2017-08-26-Markdown-Advance-Video.mp4" type="video/mp4">
-      </video>
+>引用
 ```
+
 ### 7.Markdown嵌套视频(厉害了)
+<video id="video" controls="" preload="none" poster="http://om2bks7xs.bkt.clouddn.com/2017-08-26-Markdown-Advance-Video.jpg">
+      <source id="mp4" src="http://om2bks7xs.bkt.clouddn.com/2017-08-26-Markdown-Advance-Video.mp4" type="video/mp4">
+      </video>
+      
+```
+<video id="video" controls="" preload="none" poster="http://om2bks7xs.bkt.clouddn.com/2017-08-26-Markdown-Advance-Video.jpg">
+      <source id="mp4" src="http://om2bks7xs.bkt.clouddn.com/2017-08-26-Markdown-Advance-Video.mp4" type="video/mp4">
+      </video>
+```
+### 8.Markdown嵌套音频(厉害了)
+<audio id="audio" controls="" preload="none">
+      <source id="mp3" src="http://oht4nlntk.bkt.clouddn.com/Music_iP%E8%B5%B5%E9%9C%B2%20-%20%E7%A6%BB%E6%AD%8C%20%28Live%29.mp3">
+      </audio>
+
+```
+<audio id="audio" controls="" preload="none">
+      <source id="mp3" src="http://oht4nlntk.bkt.clouddn.com/Music_iP%E8%B5%B5%E9%9C%B2%20-%20%E7%A6%BB%E6%AD%8C%20%28Live%29.mp3">
+      </audio>
+```
