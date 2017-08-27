@@ -71,29 +71,46 @@ tags:
 #### [Persist](http://www.jianshu.com/p/1c197ef8ddbb)
 #### [Redirect Middleware](http://www.jianshu.com/p/d09dba0684b3)
 ### JWT
-#### [Package](http://blog.fandong.me/2017/08/13/iOS-SwiftVaporWeb18/)
-#### [Overview](http://blog.fandong.me/2017/08/13/iOS-SwiftVaporWeb19/)
+#### [Package](http://blog.fandong.me/2017/08/13/iOS-SwiftVaporWeb17/)
+#### [Overview](http://blog.fandong.me/2017/08/13/iOS-SwiftVaporWeb18/)
 ### Session
 #### [Package](http://www.jianshu.com/p/30d8c92a98a5)
 #### [Overview](http://www.jianshu.com/p/11b9178f64ed)
 ### HTTP
-#### [Package](http://blog.fandong.me/2017/08/15/iOS-SwiftVaporWeb20/)
+#### [Package](http://blog.fandong.me/2017/08/15/iOS-SwiftVaporWeb19/)
+#### [Request](http://blog.fandong.me/2017/08/16/iOS-SwiftVaporWeb20/)
+#### [Response](http://blog.fandong.me/2017/08/17/iOS-SwiftVaporWeb21/)
+#### [Middleware](http://blog.fandong.me/2017/08/18/iOS-SwiftVaporWeb22/)
+#### [Body](http://blog.fandong.me/2017/08/20/iOS-SwiftVaporWeb23/)
+#### [ResponseRepresentable](http://blog.fandong.me/2017/08/20/iOS-SwiftVaporWeb24/)
+#### [Responder](http://blog.fandong.me/2017/08/21/iOS-SwiftVaporWeb25/)
+#### [Client](http://blog.fandong.me/2017/08/21/iOS-SwiftVaporWeb26/)
+#### [Server](http://blog.fandong.me/2017/08/21/iOS-SwiftVaporWeb27/)
+#### [CORS](http://blog.fandong.me/2017/08/21/iOS-SwiftVaporWeb28/)
 ### Leaf
 #### [Package](http://www.jianshu.com/p/5f631eac999f)
 #### [Provider](http://www.jianshu.com/p/7e6c2c587899)
 #### [Overview](http://www.jianshu.com/p/53c9477eda83)
 ### Validation
+#### [Package](http://blog.fandong.me/2017/08/22/iOS-SwiftVaporWeb29/)
+#### [Overview](http://blog.fandong.me/2017/08/22/iOS-SwiftVaporWeb30/)
 ### Node
 #### [Package](http://www.jianshu.com/p/9156c55afe84)
 #### [Getting Started](http://www.jianshu.com/p/33c0544aa9ac)
-### Code
+### Core
+#### [Package](http://blog.fandong.me/2017/08/24/iOS-SwiftVaporWeb31/)
+#### [Overview](http://blog.fandong.me/2017/08/24/iOS-SwiftVaporWeb32/)
 ### Bits
 #### [Package](http://www.jianshu.com/p/d119e9939d1e)
 #### [Overview](http://www.jianshu.com/p/7af1d3dbbd78)
 ### Debugging
+#### [Package](http://blog.fandong.me/2017/08/24/iOS-SwiftVaporWeb33/)
+#### [Overview](http://blog.fandong.me/2017/08/24/iOS-SwiftVaporWeb34/)
 ### Deploy
 #### [Nginx](http://www.jianshu.com/p/e211efa92785)
 #### [Supervisor](http://www.jianshu.com/p/ac02861cba4d)
 ### Version(2.0)
-
+#### [1.5](https://docs.vapor.codes/2.0/version/1_5/)
+#### [2.0](https://docs.vapor.codes/2.0/version/2_0/)
+#### [Support](https://docs.vapor.codes/2.0/version/support/)
 
