@@ -9,7 +9,19 @@ catalog:    true
 tags:
     - GitHub
 ---
+## 想在别的地方让别人给你的仓库Star的美好方式
+### repo(仓库地址)
+### type(类型,star)
+### count(是否显示当前Star数量)
 
+```
+<iframe
+                        style="margin-left: 2px; margin-bottom:-5px;"
+                        frameborder="0" scrolling="0" width="100px" height="20px"
+                        src="https://ghbtns.com/github-btn.html?user=fandongtongxue&repo=fandongtongxue.github.io&type=star&count=true" >
+                    </iframe>
+```
+### 显示效果
 <iframe
                         style="margin-left: 2px; margin-bottom:-5px;"
                         frameborder="0" scrolling="0" width="100px" height="20px"
