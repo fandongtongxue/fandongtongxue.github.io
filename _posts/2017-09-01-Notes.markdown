@@ -18,3 +18,11 @@ tags:
 mysql -u root -p
 ```
 ## MySQL语句
+
+## Mac常用命令
+显示/隐藏 隐藏文件
+
+```
+显示：defaults write com.apple.finder AppleShowAllFiles -bool true
+隐藏：defaults write com.apple.finder AppleShowAllFiles -bool false 
+```
