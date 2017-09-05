@@ -19,3 +19,9 @@ tags:
 显示：defaults write com.apple.finder AppleShowAllFiles -bool true
 隐藏：defaults write com.apple.finder AppleShowAllFiles -bool false 
 ```
+## MySQL常用语句
+### 更新表
+
+```
+UPDATE tableName SET name = 'newName' WHERE id = '1'
+```
