@@ -98,7 +98,7 @@ printf("Hello world!")
       <source id="mp3" src="http://oht4nlntk.bkt.clouddn.com/Music_iP%E8%B5%B5%E9%9C%B2%20-%20%E7%A6%BB%E6%AD%8C%20%28Live%29.mp3">
       </audio>
 ```
-### 想在别的地方让别人给你的仓库Star的美好方式(厉害了)
+### 9.想在别的地方让别人给你的仓库Star的美好方式(厉害了)
 #### 参数
 
 参数 | 必传 | 类型 | 备注 
