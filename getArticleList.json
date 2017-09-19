@@ -6,7 +6,8 @@ layout: nil
     {
         "title":"{{post.title}}",
         "url":"{{site.url}}{{post.url}}",
-        "date":"{{post.date|date_to_string}}"
+        "date":"{{post.date|date_to_string}}",
+        "content":"{{post.content}}"
     }{% if forloop.last == false %},{% endif %}
 {% endfor %}
 ]
