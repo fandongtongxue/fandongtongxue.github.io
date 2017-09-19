@@ -2,7 +2,7 @@
 layout: nil
 ---
 
-[{% for post in site.posts limit:1000 %}
+[{% for post in site.posts limit:10 %}
     {
         "title":"{{post.title}}",
         "url":"{{site.url}}{{post.url}}",
