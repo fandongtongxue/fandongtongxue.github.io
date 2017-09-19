@@ -98,3 +98,27 @@ printf("Hello world!")
       <source id="mp3" src="http://oht4nlntk.bkt.clouddn.com/Music_iP%E8%B5%B5%E9%9C%B2%20-%20%E7%A6%BB%E6%AD%8C%20%28Live%29.mp3">
       </audio>
 ```
+### 9.想在别的地方让别人给你的仓库Star的美好方式(厉害了)
+#### 参数
+
+参数 | 必传 | 类型 | 备注 
+------- | ------- | ------- | -------
+user | true | String | 用户名
+repo | true | String | 仓库名字
+type | true | String | star
+count | true | String | 数量
+
+<iframe
+                        style="margin-left: 2px; margin-bottom:-5px;"
+                        frameborder="0" scrolling="0" width="100px" height="20px"
+                        src="https://ghbtns.com/github-btn.html?user=fandongtongxue&repo=fandongtongxue.github.io&type=star&count=true" >
+                    </iframe>
+                    
+
+```
+<iframe
+                        style="margin-left: 2px; margin-bottom:-5px;"
+                        frameborder="0" scrolling="0" width="100px" height="20px"
+                        src="https://ghbtns.com/github-btn.html?user=fandongtongxue&repo=fandongtongxue.github.io&type=star&count=true" >
+                    </iframe>
+```

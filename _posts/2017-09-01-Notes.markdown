@@ -11,10 +11,17 @@ tags:
     - MySQL
     - ECS
 ---
-## Ubuntu
-### 通过密码登录MySQL
+
+## Mac常用命令
+### 显示/隐藏 隐藏文件
 
 ```
-mysql -u root -p
+显示：defaults write com.apple.finder AppleShowAllFiles -bool true
+隐藏：defaults write com.apple.finder AppleShowAllFiles -bool false 
 ```
-## MySQL语句
+## MySQL常用语句
+### 更新表
+
+```
+UPDATE tableName SET name = 'newName' WHERE id = '1'
+```
