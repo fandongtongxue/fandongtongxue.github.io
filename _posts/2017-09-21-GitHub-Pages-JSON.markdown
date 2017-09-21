@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "GitHub Pages 博客文章导出JSON供App使用方法"
+title:      "GitHub Pages 博客文章导出JSON方法"
 subtitle:   ""
 date: 2017-09-21 11:32:00.000000000 +08:00
 author:     "范东"
