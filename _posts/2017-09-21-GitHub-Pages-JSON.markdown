@@ -75,6 +75,6 @@ layout: nil
 
 点击如下链接
 
-[fandongtongxue.github.io/getArticleList.json](fandongtongxue.github.io/getArticleList.json)
+[http://fandongtongxue.github.io/getArticleList.json](http://fandongtongxue.github.io/getArticleList.json)
 
 ### 第五步: 大功告成
