@@ -6,7 +6,12 @@ layout: nil
     {
         "title":"{{post.title}}",
         "url":"{{site.url}}{{post.url}}",
-        "date":"{{post.date|date_to_string}}"
+        "date":"{{post.date|date_to_string}}",
+        "author":"{{post.author}}",
+        "header-img":"{{post.header-img}}",
+        "subtitle":"{{post.subtitle}}",
+        "tags":"{{post.tags}}",
+        "catalog":"{{post.catalog}}"
     }{% if forloop.last == false %},{% endif %}
 {% endfor %}
 ]
