@@ -8,7 +8,7 @@ layout: nil
         "url":"{{site.url}}{{post.url}}",
         "date":"{{post.date|date_to_string}}",
         "author":"{{post.author}}",
-        "header-img":"{{post.header-img}}",
+        "header_img":"{{post.header-img}}",
         "subtitle":"{{post.subtitle}}",
         "content":"{{post.content}}"
     }{% if forloop.last == false %},{% endif %}
