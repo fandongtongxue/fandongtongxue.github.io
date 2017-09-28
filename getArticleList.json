@@ -9,8 +9,8 @@ layout: nil
         "date":"{{post.date|date_to_string}}",
         "author":"{{post.author}}",
         "header_img":"{{post.header-img}}",
-        "subtitle":"{{post.subtitle}}",
-        "content":"{{post.content}}"
+        "subtitle":"{{post.subtitle}}"//,
+        // "content":"{{post.content}}"
     }{% if forloop.last == false %},{% endif %}
 {% endfor %}
 ]
