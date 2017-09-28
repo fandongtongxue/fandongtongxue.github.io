@@ -10,7 +10,7 @@ layout: nil
         "author":"{{post.author}}",
         "header_img":"{{post.header-img}}",
         "subtitle":"{{post.subtitle}}",
-        "content":"{{post.content}}"
+        "content":"post.content"
     }{% if forloop.last == false %},{% endif %}
 {% endfor %}
 ]
