@@ -1,3 +1,7 @@
+---
+layout: nil
+---
+
 [{% for post in site.posts limit:1000 %}
     {
         "title":"{{post.title}}",
