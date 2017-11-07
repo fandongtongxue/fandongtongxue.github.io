@@ -21,7 +21,7 @@ tags:
 废话不多说!
  
 先看效果
-![](http://om2bks7xs.bkt.clouddn.com/2017-03-09-iOS-cropidcarddemo.gif)
+![](http://oz0y4mei6.bkt.clouddn.com/FDOpenDemo.gif)
 现在开始!
 
 ### 第一步:获取图片
