@@ -63,5 +63,6 @@ ssserver -c /etc/shadowsocks.json -d stop
 ### 第三步:使用本机Shdowsocks客户端, 连接服务端上网
 
 [Windows版本](https://github.com/shadowsocks/shadowsocks-windows/releases)
-[安卓版本](https://github.com/shadowsocks/shadowsocks-android/releases)
 [Mac版本](https://github.com/shadowsocks/shadowsocks-iOS/releases)
+[安卓版本](https://github.com/shadowsocks/shadowsocks-android/releases)
+[苹果版本](https://itunes.apple.com/us/app/wingy-mian-fei-banvpn-ke-hu/id1148026741)
