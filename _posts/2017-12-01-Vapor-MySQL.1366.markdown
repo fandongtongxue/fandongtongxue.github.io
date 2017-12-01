@@ -2,7 +2,7 @@
 layout:     post
 title:      "MySQL插入中文报错.1366问题解决办法"
 subtitle:   ""
-date: 2017-11-01 21:06:00.000000000 +08:00
+date: 2017-12-01 21:06:00.000000000 +08:00
 author:     "范东"
 header-img: "img/post-bg-ios9-web.jpg"
 catalog:    true
