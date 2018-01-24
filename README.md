@@ -5,4 +5,4 @@
 ---
 网页截图
 ---
-![](http://img.blog.fandong.me/ScreenShot.png)
+![http://img.blog.fandong.me/ScreenShot.png](http://img.blog.fandong.me/ScreenShot.png)
