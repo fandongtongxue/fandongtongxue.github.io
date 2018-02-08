@@ -5,4 +5,4 @@
 ---
 网页截图
 ---
-![](http://img.blog.fandong.me/20180208122011.png)
+![](https://github.com/fandongtongxue/fandongtongxue.github.io/blob/master/ScreenShot.jpg)
