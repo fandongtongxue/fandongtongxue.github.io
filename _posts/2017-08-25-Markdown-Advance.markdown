@@ -30,12 +30,12 @@ tags:
 ###### 标题6
 ```
 ### 2.插入图片或超链接
-![图片描述](http://om2bks7xs.bkt.clouddn.com/2017-08-26-Markdown-Advance-Video.jpg)
+![图片描述](http://img.blog.fandong.me/2017-08-26-Markdown-Advance-Video.jpg)
 
 [超链接描述](http://blog.fandong.me/2017/08/25/Markdown-Advance/)
 
 ```
-![图片描述](http://om2bks7xs.bkt.clouddn.com/2017-08-26-Markdown-Advance-Video.jpg)
+![图片描述](http://img.blog.fandong.me/2017-08-26-Markdown-Advance-Video.jpg)
 
 [超链接描述](http://blog.fandong.me/2017/08/25/Markdown-Advance/)
 ```
@@ -67,7 +67,7 @@ tags:
 ```
 printf("Hello world!")
 ```
-![代码块](http://om2bks7xs.bkt.clouddn.com/2017-08-26-Markdown-Advance-Code.png)
+![代码块](http://img.blog.fandong.me/2017-08-26-Markdown-Advance-Code.png)
 
 ### 6.引用
 >引用
@@ -78,24 +78,27 @@ printf("Hello world!")
 
 ### 7.Markdown嵌套视频(厉害了)
 <video id="video" controls="" preload="none" poster="http://om2bks7xs.bkt.clouddn.com/2017-08-26-Markdown-Advance-Video.jpg">
-      <source id="mp4" src="http://om2bks7xs.bkt.clouddn.com/2017-08-26-Markdown-Advance-Video.mp4" type="video/mp4">
+      <source id="mp4" src="http://![代码块](http://img.blog.fandong.me/2017-08-26-Markdown-Advance-Code.png)
+/2017-08-26-Markdown-Advance-Video.mp4" type="video/mp4">
       </video>
       
       
 ```
-<video id="video" controls="" preload="none" poster="http://om2bks7xs.bkt.clouddn.com/2017-08-26-Markdown-Advance-Video.jpg">
-      <source id="mp4" src="http://om2bks7xs.bkt.clouddn.com/2017-08-26-Markdown-Advance-Video.mp4" type="video/mp4">
+<video id="video" controls="" preload="none" poster="http://img.blog.fandong.me/2017-08-26-Markdown-Advance-Video.jpg">
+      <source id="mp4" src="http://![代码块](http://img.blog.fandong.me/2017-08-26-Markdown-Advance-Code.png)
+/2017-08-26-Markdown-Advance-Video.mp4" type="video/mp4">
       </video>
 ```
 ### 8.Markdown嵌套音频(厉害了)
 <audio id="audio" controls="" preload="none">
-      <source id="mp3" src="http://oht4nlntk.bkt.clouddn.com/Music_iP%E8%B5%B5%E9%9C%B2%20-%20%E7%A6%BB%E6%AD%8C%20%28Live%29.mp3">
+      <source id="mp3" src="http://![代码块](http://qiniu.cloud.fandong.me/2017-08-26-Markdown-Advance-Code.png)
+/Music_iP%E8%B5%B5%E9%9C%B2%20-%20%E7%A6%BB%E6%AD%8C%20%28Live%29.mp3">
       </audio>
       
       
 ```
 <audio id="audio" controls="" preload="none">
-      <source id="mp3" src="http://oht4nlntk.bkt.clouddn.com/Music_iP%E8%B5%B5%E9%9C%B2%20-%20%E7%A6%BB%E6%AD%8C%20%28Live%29.mp3">
+      <source id="mp3" src="http://qiniu.cloud.fandong.me/Music_iP%E8%B5%B5%E9%9C%B2%20-%20%E7%A6%BB%E6%AD%8C%20%28Live%29.mp3">
       </audio>
 ```
 ### 9.想在别的地方让别人给你的仓库Star的美好方式(厉害了)
