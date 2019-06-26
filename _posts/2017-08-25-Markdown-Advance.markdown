@@ -77,16 +77,14 @@ printf("Hello world!")
 ```
 
 ### 7.Markdown嵌套视频(厉害了)
-<video id="video" controls="" preload="none" poster="http://om2bks7xs.bkt.clouddn.com/2017-08-26-Markdown-Advance-Video.jpg">
-      <source id="mp4" src="http://![代码块](http://img.blog.fandong.me/2017-08-26-Markdown-Advance-Code.png)
-/2017-08-26-Markdown-Advance-Video.mp4" type="video/mp4">
+<video id="video" controls="" preload="none" poster="http://img.blog.fandong.me/2017-08-26-Markdown-Advance-Video.jpg">
+      <source id="mp4" src="http://img.blog.fandong.me/2017-08-26-Markdown-Advance-Video.mp4" type="video/mp4">
       </video>
       
       
 ```
 <video id="video" controls="" preload="none" poster="http://img.blog.fandong.me/2017-08-26-Markdown-Advance-Video.jpg">
-      <source id="mp4" src="http://![代码块](http://img.blog.fandong.me/2017-08-26-Markdown-Advance-Code.png)
-/2017-08-26-Markdown-Advance-Video.mp4" type="video/mp4">
+      <source id="mp4" src="http://img.blog.fandong.me/2017-08-26-Markdown-Advance-Video.mp4" type="video/mp4">
       </video>
 ```
 ### 8.Markdown嵌套音频(厉害了)
