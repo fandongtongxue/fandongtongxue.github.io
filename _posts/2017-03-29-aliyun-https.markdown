@@ -75,6 +75,6 @@ nginx
 启动nginx
 
 ### 第三步：清除浏览器缓存，重新试试吧
-![](http://om2bks7xs.bkt.clouddn.com/2017-03-29-aliyun-https.jpg)
+![](http://img.blog.fandong.me/2017-03-29-aliyun-https.jpg)
 
 
