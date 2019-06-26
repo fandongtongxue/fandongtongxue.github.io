@@ -13,7 +13,7 @@ tags:
 ---
 
 阿里云提供了免费的SSL证书（见下图）
-![](http://om2bks7xs.bkt.clouddn.com/2017-03-29-aliyun-ca.jpg)
+![](http://img.blog.fandong.me/2017-03-29-aliyun-ca.jpg)
 然后申请了SSL证书，配置好
 这时候发现通过非https地址同样能访问成功，才想起忘记设置强制跳转。
 方法如下
