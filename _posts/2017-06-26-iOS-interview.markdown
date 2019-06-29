@@ -12,8 +12,8 @@ tags:
 ---
 
 ---
-![](http://om2bks7xs.bkt.clouddn.com/2016-06-26-iOS-interview-kunlun01.JPG)
-![](http://om2bks7xs.bkt.clouddn.com/2016-06-26-iOS-interview-kunlun02.JPG)
+![](http://img.blog.fandong.me/2016-06-26-iOS-interview-kunlun01.JPG)
+![](http://img.blog.fandong.me/2016-06-26-iOS-interview-kunlun02.JPG)
 
 
 

@@ -18,11 +18,11 @@ tags:
 
 ---
 ### 1.您所访问的站点在微博认证失败,错误号:21322
-![](http://om2bks7xs.bkt.clouddn.com/2017-07-09-iOS-social_question_1.png)
+![](http://img.blog.fandong.me/2017-07-09-iOS-social_question_1.png)
 - 解决方案:
 - 安全域名设置为否
-![](http://om2bks7xs.bkt.clouddn.com/2017-07-09-iOS-social_answer_1_1.png)
+![](http://img.blog.fandong.me/2017-07-09-iOS-social_answer_1_1.png)
 - 或者填上回调地址,同时在项目中设置
-![](http://om2bks7xs.bkt.clouddn.com/2017-07-09-iOS-social_answer_1_2.png)
+![](http://img.blog.fandong.me/2017-07-09-iOS-social_answer_1_2.png)
 
 

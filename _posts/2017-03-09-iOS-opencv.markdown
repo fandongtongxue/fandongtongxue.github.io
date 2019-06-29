@@ -11,7 +11,7 @@ tags:
     - OpenCV
 ---
 
-![](http://om2bks7xs.bkt.clouddn.com/2017-03-09-iOS-opencv.jpeg)
+![](http://img.blog.fandong.me/2017-03-09-iOS-opencv.jpeg)
 突如其来的来了一个App亮点 
 
 在拍摄身份证图片准备上传的时候,直接裁减掉除身份证外多余的部分!
@@ -21,7 +21,7 @@ tags:
 废话不多说!
  
 先看效果
-![](http://oz0y4mei6.bkt.clouddn.com/FDOpenDemo.gif)
+![](http://dl.code.fandong.me/FDOpenDemo.gif)
 现在开始!
 
 ### 第一步:获取图片
