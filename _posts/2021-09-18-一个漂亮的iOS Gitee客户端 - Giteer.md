@@ -1,3 +1,14 @@
+---
+layout:     post
+title:      "一个漂亮的iOS Gitee客户端 - Giteer"
+subtitle:   ""
+date: 2021-09-21 11:32:00.000000000 +08:00
+author:     "范东"
+header-img: "img/post-bg-ios9-web.jpg"
+catalog:    true
+tags:
+    - Gitee
+---
 ## 一个漂亮的iOS Gitee客户端 - Giteer
 #### 1. 前言
 之前一直都是使用Objective-C（以下简称OC）开发iOS APP，眼看着苹果爸爸一步一步抛弃OC这个养子，觉得再不学Swift自己也要被抛弃了。于是就准备用Swift写Gitee的Demo来练练手。港真，一开始从OC转Swift真的不习惯，白天在公司写OC，晚上回家写Swift。慢慢这种状态持续了半个多月后发现，Swift要简洁太多😂 😂 😂
